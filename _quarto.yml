@@ -2,8 +2,17 @@ project:
   type: book
   render:
     - index.qmd
+    - content/m01.qmd
+    - content/m02.qmd
+    - content/m03.qmd
+    - content/m04.qmd
+    - content/m05.qmd
+    - content/m06.qmd
+    - content/m07.qmd
     - content/m08.qmd
-    - content/m08-answers.qmd
+    - content/m09.qmd
+    - content/m10.qmd
+    - content/answers.qmd
     - content/glossary.qmd
     - content/references.qmd
   resources:
@@ -28,8 +37,17 @@ book:
     collapse-level: 2
   chapters:
     - index.qmd
+    - content/m01.qmd
+    - content/m02.qmd
+    - content/m03.qmd
+    - content/m04.qmd
+    - content/m05.qmd
+    - content/m06.qmd
+    - content/m07.qmd
     - content/m08.qmd
-    - content/m08-answers.qmd
+    - content/m09.qmd
+    - content/m10.qmd
+    - content/answers.qmd
     - content/glossary.qmd
     - content/references.qmd
 
@@ -54,17 +72,21 @@ format:
     link-external-newwindow: true
   pdf:
     pdf-engine: xelatex
+    pdf-engine-opt: -interaction=batchmode
+    latex-auto-install: false
+    latex-min-runs: 3
+    latex-max-runs: 5
     documentclass: book
     classoption:
       - oneside
       - openany
     papersize: a4
-    fontsize: 11pt
+    fontsize: 12pt
     geometry:
-      - top=23mm
-      - bottom=25mm
-      - inner=25mm
-      - outer=21mm
+      - top=31mm
+      - bottom=31mm
+      - inner=30mm
+      - outer=26mm
       - headheight=15pt
     toc: true
     toc-depth: 2

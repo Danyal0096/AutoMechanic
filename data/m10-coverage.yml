@@ -1,0 +1,30 @@
+schema_version: 1
+module: M10
+status: published
+entries:
+  - {id: S18-C01, source: S18, anchor: m10-suspension-mission, status: published}
+  - {id: S18-C02, source: S18, anchor: m10-suspension-mission, status: published}
+  - {id: S18-C03, source: S18, anchor: m10-suspension-layouts, status: published}
+  - {id: S18-C04, source: S18, anchor: m10-suspension-layouts, status: published}
+  - {id: S18-C05, source: S18, anchor: m10-suspension-layouts, status: published}
+  - {id: S18-C06, source: S18, anchor: m10-suspension-layouts, status: published}
+  - {id: S18-C07, source: S18, anchor: m10-suspension-layouts, status: published}
+  - {id: S18-C08, source: S18, anchor: m10-joints, status: published}
+  - {id: S18-C09, source: S18, anchor: m10-wheel-alignment, status: published}
+  - {id: S18-C10, source: S18, anchor: m10-wheel-alignment, status: published}
+  - {id: S18-C11, source: S18, anchor: m10-wheel-alignment, status: published}
+  - {id: S18-C12, source: S18, anchor: m10-springs, status: published}
+  - {id: S18-C13, source: S18, anchor: m10-springs, status: published}
+  - {id: S18-C14, source: S18, anchor: m10-dampers, status: published}
+  - {id: S18-C15, source: S18, anchor: m10-dampers, status: published}
+  - {id: S18-C16, source: S18, anchor: m10-suspension-control, status: published}
+  - {id: S19-C01, source: S19, anchor: m10-body-architecture, status: published}
+  - {id: S19-C02, source: S19, anchor: m10-body-architecture, status: published}
+  - {id: S19-C03, source: S19, anchor: m10-body-architecture, status: published}
+  - {id: S19-C04, source: S19, anchor: m10-body-architecture, status: published}
+  - {id: S19-C05, source: S19, anchor: m10-crash-safety, status: published}
+  - {id: S19-C06, source: S19, anchor: m10-crash-safety, status: published}
+  - {id: S19-C07, source: S19, anchor: m10-crash-safety, status: published}
+  - {id: S19-C10, source: S19, anchor: m10-adas, status: published}
+  - {id: S19-C11, source: S19, anchor: m10-adas, status: published}
+  - {id: S19-C12, source: S19, anchor: m10-adas, status: published}

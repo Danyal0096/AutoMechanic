@@ -1,33 +1,33 @@
 schema_version: 1
 module: M08
-status: sample_verified
+status: published
 entries:
-  - {id: S12-C03, source: S12, anchor: m08-final-drive, status: sample_verified}
-  - {id: S12-C04, source: S12, anchor: m08-final-drive, status: sample_verified}
-  - {id: S12-C05, source: S12, anchor: m08-differential, status: sample_verified}
-  - {id: S12-C06, source: S12, anchor: m08-differential, status: sample_verified}
-  - {id: S12-C07, source: S12, anchor: m08-differential, status: sample_verified}
-  - {id: S12-C08, source: S12, anchor: m08-halfshafts, status: sample_verified}
-  - {id: S12-C09, source: S12, anchor: m08-halfshafts, status: sample_verified}
-  - {id: S13-C01, source: S13, anchor: m08-torque-converter, status: sample_verified}
-  - {id: S13-C02, source: S13, anchor: m08-torque-converter, status: sample_verified}
-  - {id: S13-C03, source: S13, anchor: m08-torque-converter, status: sample_verified}
-  - {id: S13-C04, source: S13, anchor: m08-selectors, status: sample_verified}
-  - {id: S13-C05, source: S13, anchor: m08-selectors, status: sample_verified}
-  - {id: S13-C06, source: S13, anchor: m08-selectors, status: sample_verified}
-  - {id: S13-C07, source: S13, anchor: m08-planetary, status: sample_verified}
-  - {id: S13-C08, source: S13, anchor: m08-planetary, status: sample_verified}
-  - {id: S13-C09, source: S13, anchor: m08-friction-elements, status: sample_verified}
-  - {id: S13-C10, source: S13, anchor: m08-control, status: sample_verified}
-  - {id: S14-C01, source: S14, anchor: m08-dct, status: sample_verified}
-  - {id: S14-C02, source: S14, anchor: m08-dct, status: sample_verified}
-  - {id: S14-C03, source: S14, anchor: m08-dct, status: sample_verified}
-  - {id: S14-C04, source: S14, anchor: m08-dct, status: sample_verified}
-  - {id: S14-C05, source: S14, anchor: m08-comparison, status: sample_verified}
-  - {id: S15-C01, source: S15, anchor: m08-cvt, status: sample_verified}
-  - {id: S15-C02, source: S15, anchor: m08-cvt-ratio, status: sample_verified}
-  - {id: S15-C03, source: S15, anchor: m08-cvt-ratio, status: sample_verified}
-  - {id: S15-C04, source: S15, anchor: m08-cvt-clamping, status: sample_verified}
-  - {id: S15-C05, source: S15, anchor: m08-cvt-control, status: sample_verified}
-  - {id: S15-C06, source: S15, anchor: m08-cvt-modes, status: sample_verified}
-  - {id: S15-C07, source: S15, anchor: m08-comparison, status: sample_verified}
+  - {id: S12-C03, source: S12, anchor: m08-final-drive, status: published}
+  - {id: S12-C04, source: S12, anchor: m08-final-drive, status: published}
+  - {id: S12-C05, source: S12, anchor: m08-differential, status: published}
+  - {id: S12-C06, source: S12, anchor: m08-differential, status: published}
+  - {id: S12-C07, source: S12, anchor: m08-differential, status: published}
+  - {id: S12-C08, source: S12, anchor: m08-halfshafts, status: published}
+  - {id: S12-C09, source: S12, anchor: m08-halfshafts, status: published}
+  - {id: S13-C01, source: S13, anchor: m08-torque-converter, status: published}
+  - {id: S13-C02, source: S13, anchor: m08-torque-converter, status: published}
+  - {id: S13-C03, source: S13, anchor: m08-torque-converter, status: published}
+  - {id: S13-C04, source: S13, anchor: m08-selectors, status: published}
+  - {id: S13-C05, source: S13, anchor: m08-selectors, status: published}
+  - {id: S13-C06, source: S13, anchor: m08-selectors, status: published}
+  - {id: S13-C07, source: S13, anchor: m08-planetary, status: published}
+  - {id: S13-C08, source: S13, anchor: m08-planetary, status: published}
+  - {id: S13-C09, source: S13, anchor: m08-friction-elements, status: published}
+  - {id: S13-C10, source: S13, anchor: m08-control, status: published}
+  - {id: S14-C01, source: S14, anchor: m08-dct, status: published}
+  - {id: S14-C02, source: S14, anchor: m08-dct, status: published}
+  - {id: S14-C03, source: S14, anchor: m08-dct, status: published}
+  - {id: S14-C04, source: S14, anchor: m08-dct, status: published}
+  - {id: S14-C05, source: S14, anchor: m08-comparison, status: published}
+  - {id: S15-C01, source: S15, anchor: m08-cvt, status: published}
+  - {id: S15-C02, source: S15, anchor: m08-cvt-ratio, status: published}
+  - {id: S15-C03, source: S15, anchor: m08-cvt-ratio, status: published}
+  - {id: S15-C04, source: S15, anchor: m08-cvt-clamping, status: published}
+  - {id: S15-C05, source: S15, anchor: m08-cvt-control, status: published}
+  - {id: S15-C06, source: S15, anchor: m08-cvt-modes, status: published}
+  - {id: S15-C07, source: S15, anchor: m08-comparison, status: published}

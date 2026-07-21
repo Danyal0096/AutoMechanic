@@ -1,0 +1,9 @@
+schema_version: 1
+module: M02
+visibility: internal
+questions:
+  - {id: q-m02-01, concepts: [S01-C05, S01-C06, S01-C07], suggested_marks: 20, mode: calculation}
+  - {id: q-m02-02, concepts: [S01-C08], suggested_marks: 20, mode: calculation}
+  - {id: q-m02-03, concepts: [S01-C03, S01-C04, S02-C01], suggested_marks: 15, mode: sequence_reconstruction}
+  - {id: q-m02-04, concepts: [S02-C07, S02-C08, S02-C09], suggested_marks: 20, mode: calculation}
+  - {id: q-m02-05, concepts: [S02-C10, S02-C11], suggested_marks: 15, mode: claim_evaluation}

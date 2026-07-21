@@ -1,0 +1,10 @@
+schema_version: 1
+module: M09
+visibility: internal
+questions:
+  - {id: q-m09-01, concepts: [S16-C01, S16-C02, S16-C03], suggested_marks: 20, mode: calculation}
+  - {id: q-m09-02, concepts: [S16-C05], suggested_marks: 15, mode: calculation}
+  - {id: q-m09-03, concepts: [S16-C06, S16-C07], suggested_marks: 20, mode: calculation}
+  - {id: q-m09-04, concepts: [S16-C08, S16-C09, S16-C10], suggested_marks: 20, mode: sequence_reconstruction}
+  - {id: q-m09-05, concepts: [S17-C04, S17-C05, S17-C06, S17-C07], suggested_marks: 15, mode: comparison}
+  - {id: q-m09-06, concepts: [S19-C09], suggested_marks: 20, mode: causal_reasoning}

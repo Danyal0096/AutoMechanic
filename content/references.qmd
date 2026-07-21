@@ -1,63 +1,209 @@
 # منابع {.unnumbered}
 
-منابع زیر برای پیگیری مبانی درسی و راستی‌آزمایی توضیح‌های فنی این فصل به کار
-رفته‌اند. نشانگرهای شماره‌دار متن به مدخل هم‌شماره در این فهرست پیوند دارند.
+نشانگرهای عددی فصل‌ها به مدخل هم‌شماره در این فهرست پیوند دارند. بیست مدخل نخست
+پایهٔ برنامهٔ درسی‌اند؛ مدخل‌های بعدی برای راستی‌آزمایی اصلاح‌های فنی به کار
+رفته‌اند. تاریخ مشاهدهٔ منابع وب ۲۱ ژوئیهٔ ۲۰۲۶ است.
+
+## منابع پایهٔ برنامهٔ درسی {.unnumbered}
+
+::: {#source-ameg-s00 .reference-entry}
+**۱.** [AMEG]{.ltr}، «مقدمه — تاریخچه و دسته‌بندی خودرو».
+[صفحهٔ منبع](https://ameg.ir/تاریخچه-خودرو/)
+:::
+
+::: {#source-ameg-s01 .reference-entry}
+**۲.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۱».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-1/)
+:::
+
+::: {#source-ameg-s02 .reference-entry}
+**۳.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۲».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-2/)
+:::
+
+::: {#source-ameg-s03 .reference-entry}
+**۴.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۳».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-3/)
+:::
+
+::: {#source-ameg-s04 .reference-entry}
+**۵.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۴».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-4/)
+:::
+
+::: {#source-ameg-s05 .reference-entry}
+**۶.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۵».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-5/)
+:::
+
+::: {#source-ameg-s06 .reference-entry}
+**۷.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۶».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-6/)
+:::
+
+::: {#source-ameg-s07 .reference-entry}
+**۸.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۷».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-7/)
+:::
+
+::: {#source-ameg-s08 .reference-entry}
+**۹.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۸».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-8/)
+:::
+
+::: {#source-ameg-s09 .reference-entry}
+**۱۰.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۰۹».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-9/)
+:::
+
+::: {#source-ameg-s10 .reference-entry}
+**۱۱.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۰».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-10/)
+:::
+
+::: {#source-ameg-s11 .reference-entry}
+**۱۲.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۱».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-11/)
+:::
 
 ::: {#source-ameg-s12 .reference-entry}
-**۱.** [AMEG]{.ltr}، «دیفرانسیل خودرو و پلوس». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ
-۲۰۲۶. [صفحهٔ منبع](https://ameg.ir/دیفرانسیل-خودرو/)
+**۱۳.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۲».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-12/)
 :::
 
 ::: {#source-ameg-s13 .reference-entry}
-**۲.** [AMEG]{.ltr}، «گیربکس اتوماتیک». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶.
-[صفحهٔ منبع](https://ameg.ir/گیربکس-اتوماتیک/)
+**۱۴.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۳».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-13/)
 :::
 
 ::: {#source-ameg-s14 .reference-entry}
-**۳.** [AMEG]{.ltr}، «گیربکس دو کلاچه». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶.
-[صفحهٔ منبع](https://ameg.ir/گیربکس-دوکلاچه/)
+**۱۵.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۴».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-14/)
 :::
 
 ::: {#source-ameg-s15 .reference-entry}
-**۴.** [AMEG]{.ltr}، «گیربکس پیوسته‌متغیر». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ
-۲۰۲۶. [صفحهٔ منبع](https://ameg.ir/گیربکس-پیوسته-متغیر/)
+**۱۶.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۵».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-15/)
+:::
+
+::: {#source-ameg-s16 .reference-entry}
+**۱۷.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۶».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-16/)
+:::
+
+::: {#source-ameg-s17 .reference-entry}
+**۱۸.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۷».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-17/)
+:::
+
+::: {#source-ameg-s18 .reference-entry}
+**۱۹.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۸».
+[صفحهٔ منبع](https://ameg.ir/مکانیک-خودرو-18/)
+:::
+
+::: {#source-ameg-s19 .reference-entry}
+**۲۰.** [AMEG]{.ltr}، «مکانیک خودرو — بخش ۱۹: بدنه خودرو».
+[صفحهٔ منبع](https://ameg.ir/بدنه-خودرو/)
+:::
+
+## منابع راستی‌آزمایی فنی {.unnumbered}
+
+::: {#source-api-oil .reference-entry}
+**۲۱.** [American Petroleum Institute]{.ltr}، [Oil Categories]{.ltr}.
+[صفحهٔ رسمی](https://www.api.org/products-and-services/engine-oil/eolcs-categories-and-classifications/oil-categories)
+:::
+
+::: {#source-api-1509 .reference-entry}
+**۲۲.** [American Petroleum Institute]{.ltr}، [API 1509, Annex F: SAE
+Viscosity Grades]{.ltr}. [نسخهٔ رسمی PDF](https://www.api.org/-/media/files/certification/engine-oil-diesel/publications/api%201509-%2021st%20edition%20annex%20f.pdf)
+:::
+
+::: {#source-ford-maintenance .reference-entry}
+**۲۳.** [Ford Motor Company]{.ltr}، [Scheduled Maintenance: Timing Belt]{.ltr}.
+[راهنمای رسمی](https://www.fordservicecontent.com/Ford_Content/vdirsnet/OwnerManual/Home/Content?ProcUid=G1686026&Uid=G1686022&buildtype=web&countryCode=USA&div=f&languageCode=en&moidRef=G1612532&userMarket=usa&vFilteringEnabled=False&variantid=3324)
+:::
+
+::: {#source-honda-maintenance .reference-entry}
+**۲۴.** [American Honda Motor Co.]{.ltr}، [2021 Odyssey Maintenance Minder
+System]{.ltr}. [راهنمای رسمی PDF](https://owners.honda.com/utility/download?path=%2Fstatic%2Fpdfs%2F2021%2FOdyssey%2F2021_Odyssey_Maintenance_Minder_System.PDF)
+:::
+
+::: {#source-afdc-octane .reference-entry}
+**۲۵.** [U.S. Department of Energy]{.ltr}، [Ethanol Fuel Basics]{.ltr}.
+[صفحهٔ رسمی](https://afdc.energy.gov/fuels/ethanol-fuel-basics)
+:::
+
+::: {#source-carb-obd .reference-entry}
+**۲۶.** [California Air Resources Board]{.ltr}، [On-Board Diagnostic II
+Systems Fact Sheet]{.ltr}. [صفحهٔ رسمی](https://ww2.arb.ca.gov/resources/fact-sheets/board-diagnostic-ii-obd-ii-systems-fact-sheet)
+:::
+
+::: {#source-nhtsa-abs .reference-entry}
+**۲۷.** [National Highway Traffic Safety Administration]{.ltr}، [ABS Wheel
+Slip Interpretation]{.ltr}. [صفحهٔ رسمی](https://www.nhtsa.gov/interpretations/1210corrforweb)
+:::
+
+::: {#source-mycardoeswhat-abs .reference-entry}
+**۲۸.** [MyCarDoesWhat / National Safety Council]{.ltr}، [Anti-lock Braking
+System]{.ltr}. [صفحهٔ آموزشی](https://www.mycardoeswhat.org/safety-features/anti-lock-braking-system/)
+:::
+
+::: {#source-nhtsa-esc .reference-entry}
+**۲۹.** [National Highway Traffic Safety Administration]{.ltr}، [Electronic
+Stability Control Final Regulatory Impact Analysis]{.ltr}، ۲۰۰۷.
+[نسخهٔ رسمی PDF](https://www.nhtsa.gov/sites/nhtsa.gov/files/fmvss/ESC_FRIA_%252003_2007.pdf)
+:::
+
+::: {#source-nhtsa-automation .reference-entry}
+**۳۰.** [National Highway Traffic Safety Administration]{.ltr}، [Automated
+Vehicles for Safety]{.ltr}. [صفحهٔ رسمی](https://www.nhtsa.gov/vehicle-safety/automated-vehicles-safety)
+:::
+
+::: {#source-sae-active-suspension .reference-entry}
+**۳۱.** [SAE International]{.ltr}، [Technical Paper 930266: Active
+Suspension]{.ltr}، ۱۹۹۳. [رکورد رسمی](https://legacy.sae.org/gsdownload/?prodCd=930266)
+:::
+
+::: {#source-sae-air-suspension .reference-entry}
+**۳۲.** [SAE International]{.ltr}، [Air Suspension with Semi-active
+Dampers]{.ltr}. [صفحهٔ رسمی](https://www.sae.org/articles/a-30-year-hiatus-jeep-remakes-wagoneer-sae-ma-06665)
 :::
 
 ::: {#source-eaton-open-diff .reference-entry}
-**۵.** [Eaton]{.ltr}، [Open Differential]{.ltr}. منبع فنی رسمی؛ مشاهده در
-۲۱ ژوئیهٔ ۲۰۲۶. [صفحهٔ رسمی](https://www.eaton.com/us/en-us/products/differentials-traction-control/open-differential.html)
+**۳۳.** [Eaton]{.ltr}، [Open Differential]{.ltr}.
+[صفحهٔ رسمی](https://www.eaton.com/us/en-us/products/differentials-traction-control/open-differential.html)
 :::
 
 ::: {#source-eaton-lsd .reference-entry}
-**۶.** [Eaton]{.ltr}، [Limited-Slip Differentials]{.ltr}. منبع فنی رسمی؛
-مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶. [صفحهٔ رسمی](https://www.eaton.com/br/en-us/products/differentials-traction-control/limited-slip-differentials.html)
+**۳۴.** [Eaton]{.ltr}، [Limited-Slip Differentials]{.ltr}.
+[صفحهٔ رسمی](https://www.eaton.com/br/en-us/products/differentials-traction-control/limited-slip-differentials.html)
 :::
 
 ::: {#source-middelmann1999 .reference-entry}
-**۷.** [Middelmann, V.; Wagner, U.]{.ltr} [The Torque Converter as a
-System]{.ltr}. مجموعه‌مقالات [LuK/Schaeffler]{.ltr}؛ مشاهده در ۲۱ ژوئیهٔ
-۲۰۲۶. [نسخهٔ رسمی PDF](https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/symposia_1/downloads_11/6_Torque_Converter.pdf)
+**۳۵.** [Middelmann, V.; Wagner, U.]{.ltr}، [The Torque Converter as a
+System]{.ltr}. [LuK/Schaeffler]{.ltr}، ۱۹۹۹.
+[نسخهٔ رسمی PDF](https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/symposia_1/downloads_11/6_Torque_Converter.pdf)
 :::
 
 ::: {#source-zf2019 .reference-entry}
-**۸.** [ZF Friedrichshafen AG]{.ltr}، [ZF Automatic Transmission with
-Optimized Torque Converter]{.ltr}، ۲۰۱۹. [نسخهٔ رسمی PDF](https://press.zf.com/press/media/en/press_media/2019_3/pdf/releases_5/global_2/tx2019_01_08_pi_zfa_torque_converter_eng.pdf)
+**۳۶.** [ZF Friedrichshafen AG]{.ltr}، [ZF Automatic Transmission with
+Optimized Torque Converter]{.ltr}، ۲۰۱۹.
+[نسخهٔ رسمی PDF](https://press.zf.com/press/media/en/press_media/2019_3/pdf/releases_5/global_2/tx2019_01_08_pi_zfa_torque_converter_eng.pdf)
 :::
 
 ::: {#source-li2012 .reference-entry}
-**۹.** [Li, C.-T.; Zhang, X.; Peng, H.]{.ltr} [Design of Power-Split Hybrid
+**۳۷.** [Li, C.-T.; Zhang, X.; Peng, H.]{.ltr}، [Design of Power-Split Hybrid
 Vehicles with a Single Planetary Gear]{.ltr}. [ASME]{.ltr}، ۲۰۱۲.
 [نسخهٔ مقاله](https://huei.engin.umich.edu/wp-content/uploads/sites/186/2015/02/DSCC-2012-Zhang.pdf)
 :::
 
 ::: {#source-kimmig2006 .reference-entry}
-**۱۰.** [Kimmig, K.-L.; Agner, I.]{.ltr} [Double Clutch — Wet or Dry, That
-Is the Question]{.ltr}. هشتمین سمپوزیوم [LuK/Schaeffler]{.ltr}، ۲۰۰۶.
+**۳۸.** [Kimmig, K.-L.; Agner, I.]{.ltr}، [Double Clutch — Wet or Dry, That
+Is the Question]{.ltr}. [LuK/Schaeffler]{.ltr}، ۲۰۰۶.
 [نسخهٔ رسمی PDF](https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/symposia_1/downloads_11/09_Double_clutch.pdf)
 :::
 
 ::: {#source-bosch-pushbelt .reference-entry}
-**۱۱.** [Bosch Mobility]{.ltr}، [Pushbelt for Continuously Variable
-Transmission]{.ltr}. منبع فنی رسمی؛ مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶.
-[صفحهٔ رسمی](https://www.bosch-mobility.com/en/solutions/transmission-technology/pushbelt/)
+**۳۹.** [Bosch Mobility]{.ltr}، [Pushbelt for Continuously Variable
+Transmission]{.ltr}. [صفحهٔ رسمی](https://www.bosch-mobility.com/en/solutions/transmission-technology/pushbelt/)
 :::

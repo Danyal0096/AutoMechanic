@@ -1,5 +1,6 @@
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
 import { spawnSync } from "node:child_process";
+import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -31,7 +32,7 @@ function findQuarto() {
   return found;
 }
 
-function pdfEnvironment() {
+function pdfEnvironment(artifactDirectory, workDirectory) {
   const bundledTexmf = join(
     root,
     ".tools",
@@ -42,10 +43,22 @@ function pdfEnvironment() {
     "texmf-dist",
   );
   const texmf = process.env.TEXMFHOME || (existsSync(bundledTexmf) ? bundledTexmf : "");
+  const realXeLaTeX = process.env.AUTO_MECHANIC_REAL_XELATEX || commandExists("xelatex");
+  if (!realXeLaTeX) {
+    throw new Error("XeLaTeX not found. Install TeX Live 2023 or set AUTO_MECHANIC_REAL_XELATEX.");
+  }
   const env = {
     ...process.env,
+    AUTO_MECHANIC_REAL_XELATEX: realXeLaTeX,
+    AUTO_MECHANIC_XELATEX_LOG: join(artifactDirectory, "xelatex-console.log"),
+    AUTO_MECHANIC_XELATEX_DETAIL_LOG: join(artifactDirectory, "xelatex-detail.log"),
+    AUTO_MECHANIC_XELATEX_WORKDIR: workDirectory,
     OSFONTDIR: `${join(root, "assets", "fonts")}//`,
-    PATH: `${join(root, ".tools", "rsvg", "usr", "bin")}:${process.env.PATH || ""}`,
+    PATH: [
+      join(root, "scripts", "bin"),
+      join(root, ".tools", "rsvg", "usr", "bin"),
+      process.env.PATH || "",
+    ].join(":"),
   };
 
   if (texmf) env.TEXMFHOME = texmf;
@@ -66,10 +79,22 @@ function render(format) {
   const outputDir = format === "html" ? "_output/web" : "_output/pdf";
   const localHome = join(root, ".tools", "home");
   const localCache = join(root, ".tools", "cache-runtime");
+  const artifactDirectory = join(root, "artifacts", "qa", "phase5");
   mkdirSync(localHome, { recursive: true });
   mkdirSync(localCache, { recursive: true });
+  mkdirSync(artifactDirectory, { recursive: true });
+  const pdfWorkDirectory = format === "pdf"
+    ? mkdtempSync(join(tmpdir(), "auto-mechanic-xelatex-"))
+    : "";
+  if (format === "pdf") {
+    writeFileSync(join(artifactDirectory, "xelatex-console.log"), "");
+    writeFileSync(join(artifactDirectory, "xelatex-detail.log"), "");
+    for (const generated of ["index.aux", "index.log", "index.out", "index.pdf", "index.toc"]) {
+      rmSync(join(root, generated), { force: true });
+    }
+  }
   const env = {
-    ...(format === "pdf" ? pdfEnvironment() : process.env),
+    ...(format === "pdf" ? pdfEnvironment(artifactDirectory, pdfWorkDirectory) : process.env),
     HOME: localHome,
     XDG_CACHE_HOME: localCache,
     DENO_DIR: join(localCache, "deno"),
@@ -84,12 +109,18 @@ function render(format) {
   );
   process.stdout.write(result.stdout || "");
   process.stderr.write(result.stderr || "");
-  const artifactDirectory = join(root, "artifacts", "qa", "phase3");
-  mkdirSync(artifactDirectory, { recursive: true });
   writeFileSync(
     join(artifactDirectory, `build-${format}.log`),
     `${result.stdout || ""}${result.stderr || ""}`,
   );
+  if (format === "pdf") {
+    for (const extension of ["log", "aux", "toc", "out"]) {
+      const source = join(pdfWorkDirectory, `index.${extension}`);
+      if (existsSync(source)) {
+        copyFileSync(source, join(artifactDirectory, `latex-index.${extension}`));
+      }
+    }
+  }
   if (result.status !== 0) process.exit(result.status ?? 1);
   const expected = format === "html"
     ? join(root, outputDir, "index.html")
@@ -97,6 +128,7 @@ function render(format) {
   if (!existsSync(expected)) {
     throw new Error(`Quarto exited without producing ${expected}. See build-${format}.log.`);
   }
+  if (format === "pdf") rmSync(pdfWorkDirectory, { recursive: true, force: true });
 }
 
 if (requested === "web" || requested === "all") render("html");

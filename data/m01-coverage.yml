@@ -1,0 +1,11 @@
+schema_version: 1
+module: M01
+status: published
+entries:
+  - {id: S00-C01, source: S00, anchor: m01-history, status: published}
+  - {id: S00-C02, source: S00, anchor: m01-history, status: published}
+  - {id: S00-C03, source: S00, anchor: m01-history, status: published}
+  - {id: S00-C04, source: S00, anchor: m01-history, status: published}
+  - {id: S00-C05, source: S00, anchor: m01-evolution, status: published}
+  - {id: S00-C06, source: S00, anchor: m01-history, status: published}
+  - {id: S00-C07, source: S00, anchor: m01-eight-systems, status: published}

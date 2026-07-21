@@ -1,0 +1,17 @@
+schema_version: 1
+module: M04
+status: published
+entries:
+  - {id: S02-C04, source: S02, anchor: m04-balance-flywheel, status: published}
+  - {id: S04-C01, source: S04, anchor: m04-crank-slider, status: published}
+  - {id: S04-C02, source: S04, anchor: m04-balance-flywheel, status: published}
+  - {id: S04-C03, source: S04, anchor: m04-bearings, status: published}
+  - {id: S04-C04, source: S04, anchor: m04-bearings, status: published}
+  - {id: S04-C05, source: S04, anchor: m04-clearance-film, status: published}
+  - {id: S04-C06, source: S04, anchor: m04-clearance-film, status: published}
+  - {id: S05-C01, source: S05, anchor: m04-crank-slider, status: published}
+  - {id: S05-C02, source: S05, anchor: m04-crank-slider, status: published}
+  - {id: S05-C03, source: S05, anchor: m04-crank-slider, status: published}
+  - {id: S05-C04, source: S05, anchor: m04-piston-expansion, status: published}
+  - {id: S05-C05, source: S05, anchor: m04-piston-expansion, status: published}
+  - {id: S05-C09, source: S05, anchor: m04-cylinder-liners, status: published}

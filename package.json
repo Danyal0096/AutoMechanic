@@ -1,11 +1,13 @@
 {
   "name": "auto-mechanic-fa",
-  "version": "0.3.0",
+  "version": "0.6.0",
   "private": true,
-  "description": "Single-source Quarto sample for General Automotive Mechanics in Persian",
+  "description": "Complete single-source Persian General Automotive Mechanics book for static web and XePersian PDF",
   "type": "module",
   "scripts": {
     "bootstrap:tools": "node scripts/bootstrap-tools.mjs",
+    "generate:glossary": "node scripts/generate-glossary.mjs",
+    "check:glossary": "node scripts/generate-glossary.mjs --check",
     "setup:browsers": "node scripts/setup-browsers.mjs",
     "dev": "node scripts/dev.mjs",
     "build:web": "node scripts/build.mjs web",

@@ -1,0 +1,9 @@
+schema_version: 1
+module: M04
+visibility: internal
+questions:
+  - {id: q-m04-01, concepts: [S04-C01, S05-C01], suggested_marks: 20, mode: calculation}
+  - {id: q-m04-02, concepts: [S04-C03, S05-C01, S05-C02], suggested_marks: 15, mode: force_path}
+  - {id: q-m04-03, concepts: [S04-C05, S04-C06], suggested_marks: 20, mode: causal_comparison}
+  - {id: q-m04-04, concepts: [S02-C04, S04-C02], suggested_marks: 15, mode: comparison}
+  - {id: q-m04-05, concepts: [S05-C09], suggested_marks: 15, mode: fault_isolation}

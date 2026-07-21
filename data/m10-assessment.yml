@@ -1,0 +1,10 @@
+schema_version: 1
+module: M10
+visibility: internal
+questions:
+  - {id: q-m10-01, concepts: [S18-C01, S18-C02], suggested_marks: 15, mode: causal_reasoning}
+  - {id: q-m10-02, concepts: [S18-C03, S18-C04, S18-C06], suggested_marks: 20, mode: comparison}
+  - {id: q-m10-03, concepts: [S18-C12, S18-C14], suggested_marks: 15, mode: calculation}
+  - {id: q-m10-04, concepts: [S18-C13, S18-C16], suggested_marks: 20, mode: classification}
+  - {id: q-m10-05, concepts: [S19-C05, S19-C06, S19-C07], suggested_marks: 20, mode: causal_reasoning}
+  - {id: q-m10-06, concepts: [S19-C10, S19-C11, S19-C12], suggested_marks: 15, mode: comparison}

@@ -1,0 +1,16 @@
+schema_version: 1
+module: M03
+status: published
+entries:
+  - {id: S02-C02, source: S02, anchor: m03-valve-timing, status: published}
+  - {id: S02-C03, source: S02, anchor: m03-valve-timing, status: published}
+  - {id: S03-C01, source: S03, anchor: m03-valvetrain, status: published}
+  - {id: S03-C02, source: S03, anchor: m03-valvetrain, status: published}
+  - {id: S03-C03, source: S03, anchor: m03-timing-drive, status: published}
+  - {id: S03-C04, source: S03, anchor: m03-timing-drive, status: published}
+  - {id: S03-C05, source: S03, anchor: m03-head-sealing, status: published}
+  - {id: S03-C06, source: S03, anchor: m03-head-sealing, status: published}
+  - {id: S03-C07, source: S03, anchor: m03-head-sealing, status: published}
+  - {id: S03-C08, source: S03, anchor: m03-head-diagnosis, status: published}
+  - {id: S05-C06, source: S05, anchor: m03-head-sealing, status: published}
+  - {id: S05-C07, source: S05, anchor: m03-head-sealing, status: published}

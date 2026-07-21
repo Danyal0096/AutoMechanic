@@ -1,0 +1,9 @@
+schema_version: 1
+module: M07
+visibility: internal
+questions:
+  - {id: q-m07-01, concepts: [S09-C05], suggested_marks: 15, mode: calculation}
+  - {id: q-m07-02, concepts: [S10-C01, S10-C02, S10-C05], suggested_marks: 15, mode: causal_reasoning}
+  - {id: q-m07-03, concepts: [S11-C01, S11-C02], suggested_marks: 20, mode: calculation}
+  - {id: q-m07-04, concepts: [S11-C04, S11-C07], suggested_marks: 20, mode: calculation}
+  - {id: q-m07-05, concepts: [S12-C01, S12-C02], suggested_marks: 20, mode: fault_isolation}

@@ -1,0 +1,79 @@
+#!/usr/bin/env node
+
+import {
+  appendFileSync,
+  closeSync,
+  copyFileSync,
+  existsSync,
+  openSync,
+  readFileSync,
+} from "node:fs";
+import { spawnSync } from "node:child_process";
+import { basename, dirname, extname, join, resolve } from "node:path";
+import { tmpdir } from "node:os";
+
+const realEngine = process.env.AUTO_MECHANIC_REAL_XELATEX;
+if (!realEngine) {
+  console.error("AUTO_MECHANIC_REAL_XELATEX is required by the build wrapper.");
+  process.exit(1);
+}
+
+const originalArguments = process.argv.slice(2);
+const texArgument = originalArguments.find((argument) => extname(argument) === ".tex");
+const workDirectory = process.env.AUTO_MECHANIC_XELATEX_WORKDIR;
+if (!texArgument || !workDirectory) {
+  console.error("A .tex input and AUTO_MECHANIC_XELATEX_WORKDIR are required.");
+  process.exit(1);
+}
+const engineArguments = originalArguments.some((argument) => argument.startsWith("-output-directory"))
+  ? originalArguments
+  : [
+      ...originalArguments.filter((argument) => argument !== texArgument),
+      `-output-directory=${workDirectory}`,
+      texArgument,
+    ];
+
+const logPath = process.env.AUTO_MECHANIC_XELATEX_LOG
+  || join(tmpdir(), "auto-mechanic-xelatex-console.log");
+appendFileSync(logPath, `\n--- xelatex ${engineArguments.join(" ")} ---\n`);
+const logDescriptor = openSync(logPath, "a");
+const result = spawnSync(realEngine, engineArguments, {
+  env: process.env,
+  stdio: ["inherit", logDescriptor, logDescriptor],
+});
+closeSync(logDescriptor);
+
+const outputOption = engineArguments.find((argument) => argument.startsWith("-output-directory="));
+const outputDirectory = outputOption
+  ? outputOption.slice("-output-directory=".length)
+  : dirname(texArgument);
+const detailLog = process.env.AUTO_MECHANIC_XELATEX_DETAIL_LOG;
+if (detailLog) {
+  const engineLog = resolve(
+    process.cwd(),
+    outputDirectory,
+    `${basename(texArgument, extname(texArgument))}.log`,
+  );
+  if (existsSync(engineLog)) {
+    appendFileSync(
+      detailLog,
+      `\n--- completed xelatex pass ---\n${readFileSync(engineLog, "utf8")}\n`,
+    );
+  }
+}
+
+for (const extension of ["pdf", "aux", "log", "toc", "out"]) {
+  const source = resolve(
+    process.cwd(),
+    outputDirectory,
+    `${basename(texArgument, extname(texArgument))}.${extension}`,
+  );
+  if (existsSync(source)) {
+    copyFileSync(source, resolve(process.cwd(), `${basename(texArgument, extname(texArgument))}.${extension}`));
+  }
+}
+
+if (result.error) {
+  appendFileSync(logPath, `${result.error.stack || result.error.message}\n`);
+}
+process.exit(result.status ?? 1);

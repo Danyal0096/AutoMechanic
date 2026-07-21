@@ -1,84 +1,47 @@
 # AutoMechanic
 
-مخزن تولید مرحله‌ای **«مکانیک خودرو عمومی — برگرفته از آموزه‌های استاد نصیری»**؛ بازآرایی کامل مجموعهٔ ۲۰ مقاله به یک منبع آموزشی دانشگاهی فارسی با خروجی هماهنگ وب و PDF.
+مخزن تولید **«مکانیک خودرو عمومی — برگرفته از آموزه‌های استاد نصیری»**؛ بازآرایی یکپارچهٔ ۲۰ مقاله در ده ماژول دانشگاهی فارسی با یک منبع QMD مشترک برای وب ایستا و PDF رسمی.
 
 ## وضعیت پروژه
 
 | مرحله | وضعیت |
 |---|---|
-| Phase 1 — Source Audit | کامل؛ ۲۰/۲۰ منبع و ۱۹۶ مفهوم ممیزی/نگاشت شده‌اند |
-| Phase 2 — Architecture Proposal | کامل، کامیت‌شده و مصوب |
-| Approval Gate 1 | **تصویب‌شده در ۲۰۲۶-۰۷-۲۱** |
-| Phase 3 — Representative Sample | **corrective pass کامل؛ baseline نخست رد شده؛ در انتظار Approval Gate 2** |
-| Approval Gate 2 | corrective sample آمادهٔ بازبینی؛ هنوز تصویب نشده است |
-| Phase 4 — Full Production | آغاز نشده؛ تا Approval Gate 2 ممنوع |
+| Phase 1 — Source Audit | کامل؛ ۲۰/۲۰ منبع و ۱۹۶ مفهوم ممیزی و نگاشت شدند |
+| Phase 2 — Architecture | کامل و مصوب |
+| Phase 3 — M08 Sample | corrective baseline کامل، تصویب و دستی روی GitHub منتشر شد |
+| Approval Gate 2 | تصویب‌شده در ۲۰۲۶-۰۷-۲۱ |
+| Phase 4 — Full Production | کامل؛ M01–M10 و backmatter ساخته شدند |
+| Phase 5 — Self-Audit | کامل؛ defectهای درون اختیار اصلاح و کنترل‌ها بازاجرا شدند |
+| Phase 6 — Codex Preparation | کامل؛ قرارداد عملیاتی بازرسی آماده است |
+| Independent Codex Audit | **اجرا نشده؛ مرحلهٔ بعدی مالک پروژه** |
 
-شاخهٔ این مرحله: `workgpt/sample-module`.
+توسعهٔ نهایی روی شاخهٔ محلی `workgpt/full-production` و بر پایهٔ commit منتشرشدهٔ اصلاحی Phase 3، یعنی `489676f9c9cff998204eb0904f28905057ed6571`، انجام شده است. اتصال GitHub در تمام این کار فقط‌خواندنی ماند.
 
-## اسناد Gate 1
+## محصول نهایی WorkGPT
 
-- [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md) — وضعیت دریافت/استخراج، مضمون و پیچیدگی هر ۲۰ منبع؛
-- [`CONTENT_COVERAGE_MATRIX.md`](CONTENT_COVERAGE_MATRIX.md) — نگاشت ۱۹۶ مفهوم به ماژول و section؛
-- [`ISSUE_LEDGER.md`](ISSUE_LEDGER.md) — خطاها، ابهام‌ها، تصمیم‌های A–D و موانع؛
-- [`RESEARCH_LOG.md`](RESEARCH_LOG.md) — شواهد فنی و انتشار از منابع معتبر؛
-- [`ARCHITECTURE_PROPOSAL.md`](ARCHITECTURE_PROPOSAL.md) — معماری ده‌ماژولی، اهداف، stack، وب/PDF، حجم، مراحل و ریسک؛
-- [`PROJECT_SPEC.md`](PROJECT_SPEC.md) — خط مبنای دامنه، زبان، RTL، رسانه، gate و حدود اختیار؛
-- [`MEDIA_SOURCES.md`](MEDIA_SOURCES.md) — سیاست حقوق/رسانه، بررسی شش شکل ردشده و manifest سه رسانهٔ مجاز M08؛
-- [`TEST_PLAN.md`](TEST_PLAN.md) — آزمون پوشش، علم، فارسی، bidi، وب، PDF و بازتولیدپذیری؛
-- [`PHASE3_AUDIT.md`](PHASE3_AUDIT.md) — شاهد build، خودممیزی M08 و تصمیم‌های لازم در Gate 2؛
-- [`CHANGELOG.md`](CHANGELOG.md) — نقاط عطف و تغییرات معنی‌دار.
+- ده ماژول و ۱۴ صفحهٔ HTML ایستا؛
+- ۲۰/۲۰ منبع و ۱۹۶/۱۹۶ مفهوم در anchorهای واقعی با وضعیت `Published`؛
+- حدود ۳۰٬۱۳۲ واژهٔ منبع آموزشی؛
+- ۵۳ پرسش جدی و ۵۳ پاسخ تشریحی؛
+- ۱۳ مثال عددی باز‌محاسبه‌شده؛
+- ۱۳۸ پاورقی نخستین‌کاربرد اصطلاح؛
+- واژه‌نامهٔ یکپارچهٔ ۱۲۴مدخلی و ۳۹ رکورد منبع پیونددار؛
+- سه رسانهٔ فنی public-domain/CC0 با manifest، attribution و checksum؛
+- PDF رسمی ۱۱۱صفحه‌ای A4 با ۸۱۵ مقصد داخلی و شش فونت embedded/subset.
 
-شاخص قطعی منابع در [`sources/baseContentLinks.txt`](sources/baseContentLinks.txt) نگهداری می‌شود. S19 از URL اصلاح‌شدهٔ همان فایل استفاده می‌کند.
+خروجی‌ها در `_output/web/` و `_output/pdf/auto-mechanic-fa.pdf` قرار دارند. QMDهای `index.qmd` و `content/*.qmd` منبع حقیقت هر دو خروجی‌اند.
 
-## ممیزی قابل اجرا
+## پشتهٔ تثبیت‌شده
 
-نیاز فعلی: Node.js 20 یا جدیدتر و دسترسی HTTPS به `ameg.ir`. وابستگی npm وجود ندارد.
+- Quarto 1.9.38 و Pandoc 3.8.3؛
+- XeLaTeX در TeX Live 2023 و XePersian 24.8؛
+- Vazirmatn 33.0.3؛
+- Node.js 20 یا جدیدتر، Playwright 1.61.1 و axe-core 4.12.1؛
+- Chromium 149، Firefox ESR 140.12، qpdf و Poppler.
 
-```bash
-git switch workgpt/sample-module
-node scripts/audit-sources.mjs
-node scripts/audit-sources.mjs --json
-```
+XeLaTeX میزبان همچنان dependency مستند است. wrapper کمینهٔ `scripts/bin/xelatex` همان موتور میزبان را در پوشهٔ موقت اجرا می‌کند تا فایل‌های کمکی بزرگ در محیط‌های workspace قطع نشوند؛ موتور یا قالب جایگزین نمی‌شود.
 
-فرمان باید ۲۰ ردیف `accessed` برگرداند؛ خروج non-zero به معنی منبع ناموفق/ناقص است. شمارش واژه/تصویر فقط سیگنال audit است و متن منبع در مخزن ذخیره نمی‌شود.
-
-کنترل‌های محلی Gate 1:
-
-```bash
-node --check scripts/audit-sources.mjs
-git diff --check
-```
-
-## پشتهٔ اثبات‌شده و pin پیشنهادی Gate 2
-
-- Quarto Book 1.9.38 و Pandoc 3.8.3 به‌عنوان مسیر مشترک `.qmd`؛
-- HTML ایستا + CSS logical/RTL + JavaScript کمینه؛
-- XeLaTeX در TeX Live 2023 + XePersian 24.8 برای PDF رسمی؛
-- Vazirmatn 33.0.3 به‌صورت محلی برای وب و PDF و MathML بومی مرورگر برای معادلات وب؛
-- BibTeX برای رکوردهای ممیزی و نشانگرهای عددی QMD برای ارجاع خوانای مشترک؛ YAML برای اصطلاح‌نامه/رسانه/سنجش داخلی؛
-- Node.js ≥20 با lockfile؛ Playwright 1.61.1، Chromium 149 و Firefox ESR 140.12 برای مرورگر؛
-- qpdf/Poppler برای preflight و رندر PDF.
-
-نمونه از آزمون RTL، حروف‌چینی فارسی، پاورقی، وب responsive و PDF رسمی عبور کرده است؛ نسخه‌های بالا اکنون در lockfile و bootstrap با checksum ثبت شده‌اند و برای تثبیت در Gate 2 پیشنهاد می‌شوند. دلیل انتخاب و گزینه‌های کنارگذاشته‌شده در [`ARCHITECTURE_PROPOSAL.md`](ARCHITECTURE_PROPOSAL.md) آمده است.
-
-## قرارداد فرمان‌های Phase 3
-
-این interface در Phase 3 پیاده‌سازی و با build واقعی راستی‌آزمایی شده است.
-
-| کار | فرمان مصوب |
-|---|---|
-| نصب ابزارهای Node | `npm ci` |
-| پیش‌نمایش محلی | `npm run dev` |
-| ساخت وب | `npm run build:web` |
-| ساخت PDF | `npm run build:pdf` |
-| ساخت هر دو | `npm run build` |
-| تست کامل | `npm test` |
-| تست دیداری | `npm run test:visual` |
-| ممیزی پوشش | `npm run audit:coverage` |
-
-محل خروجی: `_output/web/` و `_output/pdf/auto-mechanic-fa.pdf`.
-
-راه‌اندازی clone محلی:
+## راه‌اندازی و فرمان‌ها
 
 ```bash
 npm ci
@@ -87,76 +50,66 @@ npm run setup:browsers
 npm test
 ```
 
-مسیر PDF به XeLaTeX میزبان نیاز دارد؛ baseline اثبات‌شده TeX Live 2023 است.
+| کار | فرمان |
+|---|---|
+| پیش‌نمایش محلی | `npm run dev` |
+| ساخت وب | `npm run build:web` |
+| ساخت PDF | `npm run build:pdf` |
+| ساخت هر دو | `npm run build` |
+| تست محتوا و پوشش | `npm run test:content` |
+| تست وب | `npm run test:web` |
+| تست PDF و رندر همهٔ صفحات | `npm run test:pdf` |
+| تست کامل | `npm test` |
+| ممیزی پوشش | `npm run audit:coverage` |
 
-## ساختار نمونهٔ Phase 3
+## نتیجهٔ خودممیزی WorkGPT
+
+| حوزه | نتیجه | شاهد |
+|---|---:|---|
+| محتوا، پوشش، سنجش، اصطلاح و رسانه | ۳۶/۳۶ | `artifacts/qa/phase5/content-audit.json` |
+| وب عملکردی و responsive | ۵۶/۵۶ | `artifacts/qa/phase5/web-audit.json` |
+| PDF، فونت، متن، مقصد و رندر | ۵۳/۵۳ | `artifacts/qa/phase5/pdf-audit.json` |
+| **کل** | **۱۴۵/۱۴۵** | `SELF_AUDIT_REPORT.md` |
+
+هر ۱۱۱ صفحهٔ PDF با Poppler رندر، decode و در ۲۸ contact sheet مشاهده شد. نتیجهٔ وب، build و sanity خودکار است؛ هیچ تصویب زیبایی‌شناختی انسانی برای وب ادعا نمی‌شود و آن بررسی صریحاً به Codex مستقل واگذار شده است.
+
+## اسناد اصلی
+
+- [`PROJECT_SPEC.md`](PROJECT_SPEC.md) — دامنه، زبان، RTL، رسانه، gate و حدود اختیار؛
+- [`ARCHITECTURE_PROPOSAL.md`](ARCHITECTURE_PROPOSAL.md) — معماری آموزشی و فنی؛
+- [`SOURCE_INVENTORY.md`](SOURCE_INVENTORY.md) و [`CONTENT_COVERAGE_MATRIX.md`](CONTENT_COVERAGE_MATRIX.md) — موجودی و ردیابی ۱۹۶ مفهوم؛
+- [`ISSUE_LEDGER.md`](ISSUE_LEDGER.md) و [`RESEARCH_LOG.md`](RESEARCH_LOG.md) — اصلاح‌ها، تصمیم‌ها و شواهد؛
+- [`MEDIA_SOURCES.md`](MEDIA_SOURCES.md) و [`MEDIA_LICENSING_SUMMARY.md`](MEDIA_LICENSING_SUMMARY.md) — سیاست، manifest و خلاصهٔ حقوق؛
+- [`TEST_PLAN.md`](TEST_PLAN.md)، [`SOURCE_COMPLETENESS_REPORT.md`](SOURCE_COMPLETENESS_REPORT.md) و [`SELF_AUDIT_REPORT.md`](SELF_AUDIT_REPORT.md) — معیارها و نتیجهٔ Phase 5؛
+- [`UNRESOLVED_ISSUES.md`](UNRESOLVED_ISSUES.md) — محدودیت‌های صادقانهٔ باقی‌مانده؛
+- [`CODEX_AUDIT_BRIEF.md`](CODEX_AUDIT_BRIEF.md) — قرارداد عملیاتی Phase 6 برای بازرس مستقل؛
+- [`MANUAL_IMPORT_PUSH.md`](MANUAL_IMPORT_PUSH.md) — واردکردن تاریخچه و push دستی.
+
+## ساختار کلیدی
 
 ```text
-.
-├── README.md
-├── PROJECT_SPEC.md
-├── ARCHITECTURE_PROPOSAL.md
-├── SOURCE_INVENTORY.md
-├── CONTENT_COVERAGE_MATRIX.md
-├── ISSUE_LEDGER.md
-├── RESEARCH_LOG.md
-├── MEDIA_SOURCES.md
-├── TEST_PLAN.md
-├── PHASE3_AUDIT.md
-├── CHANGELOG.md
-├── _quarto.yml
+AutoMechanic/
 ├── index.qmd
-├── content/{m08,m08-answers,glossary,references}.qmd
+├── content/{m01..m10,answers,glossary,references}.qmd
+├── data/{m01..m10-coverage,*-assessment,glossary,media}.yml
 ├── assets/{css,js,fonts,media}/
-├── data/{m08-coverage,m08-assessment,glossary}.yml
 ├── references/references.bib
 ├── print/preamble.tex
-├── filters/rtl.lua
 ├── scripts/{build,test-content,test-web,test-pdf}.mjs
-└── sources/
-    └── baseContentLinks.txt
+├── artifacts/qa/phase5/
+└── _output/{web,pdf}/
 ```
 
-درخت تولیدی فقط به‌اندازهٔ نمونهٔ M08 ساخته شده است. ایجاد ماژول‌های دیگر پیش از Gate 2 ممنوع است.
+## رسانه و انتشار
 
-## رسانه
+هیچ تصویر مقالهٔ مبدأ، تصویر مکانیکی AI یا هندسهٔ مکانیکی شبه‌واقعیِ برنامه‌ساخته در محصول نیست. تنها سه رسانهٔ فنی دارای حق روشن استفاده شده‌اند؛ در نبود رسانهٔ کافی، متن، معادله، جدول یا توالی عملیاتی ترجیح داده شده است.
 
-۱۵۸ تصویر در مقالات شناسایی شده‌اند، اما به‌صورت پیش‌فرض بازنشر نمی‌شوند. تصویر مکانیکی AI و هندسهٔ قطعهٔ برنامه‌ساخته مجاز نیست. اولویت با رسانهٔ فنی دقیق موجود و دارای مجوز روشن و ثبت کامل است؛ در نبود آن، متن، معادله، جدول، توالی یا جریان واقعاً انتزاعی استفاده می‌شود. متن مقاله‌ها مبنای برنامهٔ درسی برای بازنویسی تحول‌آفرین است و عبارت‌های طولانی آن‌ها عیناً بازتولید نمی‌شود.
+GitHub فقط‌خواندنی است. تاریخچهٔ محلی، ZIP، patch، bundle و manifest برای انتقال دستی مالک تحویل می‌شوند؛ هیچ push، PR، branch remote یا permission troubleshooting از این محیط انجام نشده است.
 
-## انتشار و تحویل مرحله‌ای
+## محدودیت‌های مهم
 
-- اتصال GitHub فقط برای خواندن است؛ هیچ write، push، branch، commit، PR یا permission troubleshooting از طریق آن انجام نمی‌شود.
-- توسعه، شاخه‌بندی و کامیت‌های معنی‌دار در مخزن محلی انجام می‌شوند.
-- پایان هر phase مصوب با ZIP کامل مخزن، patch یکپارچهٔ تغییرات phase، Git bundle تاریخچه و manifest تحویل می‌شود؛ مالک پروژه آن‌ها را دستی به GitHub منتقل می‌کند.
-
-## آزمون
-
-آزمون L1 corrective sample در کنار شواهد Gate 1 اجرا شده است. baseline نخست
-۲۵صفحه‌ای با وجود pass خودکار در human review رد شد و ادعای قبولی دیداری آن در
-`PHASE3_AUDIT.md` پس گرفته شده است. نتیجهٔ artifact اصلاحی:
-
-- ۳۴/۳۴ کنترل محتوا، پوشش، محاسبه، اصطلاح، citation و رسانه؛
-- ۷۶/۷۶ کنترل خودکار وب در Chromium و Firefox، پنج profile، keyboard، JavaScript-off، print، لینک منابع و axe؛
-- ۲۷/۲۷ کنترل PDF؛ ۲۲ صفحهٔ A4، ۱۶۳ مقصد داخلی، ۶ رکورد فونت embedded/subset، صفر صفحهٔ سفید، missing glyph و overfull box؛
-- بازبینی دیداری صفحه‌به‌صفحهٔ هر ۲۲ صفحهٔ PDF اصلاحی؛
-- صفر SVG ردشده، شناسهٔ داخلی، author–date، `n.d.` یا URL خام در PDF دانشجو؛
-- ۲۹/۲۹ مفهوم M08 از S12–S15 با anchor واقعی و وضعیت `Sample verified`.
-- build مستقل از clone تمیز؛ وب file-for-file و PDF byte-for-byte یکسان با
-  SHA-256 `98e4e12772c5830aa8f432e96c0559715c73fb98b2c2d0d289994c8ffca4dc66`.
-
-نتیجهٔ وب فقط build و sanity خودکار است. طبق تصمیم کاربر، human audit مستقل وب
-به Codex واگذار شده و این مرحله هیچ ادعای approval انسانی وب ندارد.
-
-جزئیات و معیارهای pass/fail در [`TEST_PLAN.md`](TEST_PLAN.md) و نتیجهٔ امضاشده در [`PHASE3_AUDIT.md`](PHASE3_AUDIT.md) است.
-
-## محدودیت‌ها و مسائل باز
-
-- pin دقیق stack و template بصری در Gate 2 نیازمند تصویب است؛
-- XeLaTeX کامل هنوز dependency میزبان است؛ bootstrap، Quarto/Pandoc/XePersian و ابزارهای آزمون را pin می‌کند؛
-- WebKit به L3/full regression موکول است؛ L1 در Chromium و Firefox عبور کرده است؛
-- تصاویر مبدأ بدون مجوز روشن بازنشر نمی‌شوند؛
-- تولید کامل، ماژول‌های دیگر و `CODEX_AUDIT_BRIEF.md` پیش از Gate 2/Phase 6 مجاز نیستند؛
-- `CODEX_AUDIT_BRIEF.md` عمداً تا Phase 6 ایجاد نمی‌شود؛ پیش از build واقعی، command/output جعلی می‌ساخت؛
-- انتشار GitHub دستی است و `PUB-001` با workflow تحویل artifact حل شده است.
-
-هیچ merge به `main` و هیچ آغاز Phase 4 بدون تأیید صریح Gate 2 انجام نمی‌شود.
+- human-style audit کامل وب هنوز اجرا نشده و وظیفهٔ Codex مستقل است؛
+- WebKit در خودممیزی WorkGPT اجرا نشده است؛
+- Firefox headless برای درخواست ۳۹۰px در این میزبان client width برابر ۴۳۸px می‌دهد؛ عرض دقیق ۳۶۰/۳۹۰ در Chromium پوشش دارد؛
+- XeLaTeX کامل hermetic نیست و باید روی میزبان در دسترس باشد؛
+- بازرسی Codex و `CODEX_AUDIT_REPORT.md` هنوز وجود ندارند و نباید نتیجهٔ آن‌ها پیشاپیش فرض شود.

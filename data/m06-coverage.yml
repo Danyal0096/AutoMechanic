@@ -1,0 +1,32 @@
+schema_version: 1
+module: M06
+status: published
+entries:
+  - {id: S02-C05, source: S02, anchor: m06-emissions, status: published}
+  - {id: S02-C06, source: S02, anchor: m06-emissions, status: published}
+  - {id: S08-C01, source: S08, anchor: m06-start-model, status: published}
+  - {id: S08-C02, source: S08, anchor: m06-fuel-octane, status: published}
+  - {id: S08-C03, source: S08, anchor: m06-start-model, status: published}
+  - {id: S08-C04, source: S08, anchor: m06-start-model, status: published}
+  - {id: S08-C05, source: S08, anchor: m06-diagnostics-tools, status: published}
+  - {id: S08-C06, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C07, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C08, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C09, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C10, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C11, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C12, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C13, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C14, source: S08, anchor: m06-fuel-air, status: published}
+  - {id: S08-C15, source: S08, anchor: m06-start-model, status: published}
+  - {id: S08-C16, source: S08, anchor: m06-start-model, status: published}
+  - {id: S08-C17, source: S08, anchor: m06-fuel-air, status: published}
+  - {id: S08-C18, source: S08, anchor: m06-fuel-air, status: published}
+  - {id: S08-C19, source: S08, anchor: m06-ignition, status: published}
+  - {id: S08-C20, source: S08, anchor: m06-fuel-air, status: published}
+  - {id: S08-C21, source: S08, anchor: m06-emissions, status: published}
+  - {id: S08-C22, source: S08, anchor: m06-start-model, status: published}
+  - {id: S08-C23, source: S08, anchor: m06-sensors, status: published}
+  - {id: S08-C24, source: S08, anchor: m06-diagnostics-tools, status: published}
+  - {id: S08-C25, source: S08, anchor: m06-emissions, status: published}
+  - {id: S08-C26, source: S08, anchor: m06-no-start, status: published}

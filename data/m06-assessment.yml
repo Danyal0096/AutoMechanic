@@ -1,0 +1,10 @@
+schema_version: 1
+module: M06
+visibility: internal
+questions:
+  - {id: q-m06-01, concepts: [S08-C04, S08-C06, S08-C22, S08-C26], suggested_marks: 20, mode: fault_isolation}
+  - {id: q-m06-02, concepts: [S08-C06, S08-C07], suggested_marks: 15, mode: comparison}
+  - {id: q-m06-03, concepts: [S08-C17, S08-C18], suggested_marks: 15, mode: calculation}
+  - {id: q-m06-04, concepts: [S08-C05, S08-C12, S08-C24], suggested_marks: 20, mode: fault_isolation}
+  - {id: q-m06-05, concepts: [S08-C02, S08-C13, S08-C19], suggested_marks: 15, mode: causal_reasoning}
+  - {id: q-m06-06, concepts: [S08-C20, S08-C21], suggested_marks: 15, mode: fault_isolation}

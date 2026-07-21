@@ -1,83 +1,127 @@
-schema_version: 1
-module: M08
+schema_version: 2
+scope: book
 terms:
-  - id: final-drive
-    fa: گردانندهٔ نهایی
-    en: final drive
-    definition: آخرین مرحلهٔ کاهش دور پیش از دیفرانسیل یا چرخ‌ها.
-  - id: hypoid-gear
-    fa: چرخ‌دندهٔ هیپوئید
-    en: hypoid gear
-    definition: جفت چرخ‌دنده‌ای با محورهای نامتقاطع و لغزش نسبی قابل‌توجه.
-  - id: open-differential
-    fa: دیفرانسیل باز
-    en: open differential
-    definition: سازوکاری که امکان اختلاف دور دو خروجی را با رفتار گشتاوری محدود فراهم می‌کند.
-  - id: half-shaft
-    fa: نیم‌محور یا پلوس
-    en: half shaft / axle shaft
-    definition: محور انتقال گشتاور از دیفرانسیل تا توپی چرخ.
-  - id: cv-joint
-    fa: مفصل سرعت ثابت
-    en: constant-velocity joint
-    definition: مفصلی که در زاویهٔ کاری، سرعت لحظه‌ای یکنواخت‌تری میان دو محور می‌دهد.
-  - id: transaxle
-    fa: ترنس‌اکسل
-    en: transaxle
-    definition: مجموعهٔ یکپارچهٔ گیربکس، گردانندهٔ نهایی و دیفرانسیل.
-  - id: torque-converter
-    fa: مبدل گشتاور
-    en: torque converter
-    definition: کوپلینگ هیدرودینامیکی دارای پمپ، توربین و استاتور.
-  - id: lockup-clutch
-    fa: کلاچ قفل‌کن
-    en: lock-up clutch
-    definition: مسیر اصطکاکی کنترل‌شده برای کم‌کردن لغزش مبدل.
-  - id: planetary-gearset
-    fa: مجموعهٔ سیاره‌ای
-    en: planetary gearset
-    definition: مجموعهٔ هم‌محور خورشیدی، رینگی و حامل سیاره‌ها.
-  - id: friction-element
-    fa: عنصر اصطکاکی
-    en: friction element
-    definition: کلاچ یا ترمزی که یک مسیر توان یا قید حرکتی را برقرار می‌کند.
-  - id: tcu
-    fa: واحد کنترل گیربکس
-    en: transmission control unit (TCU)
-    definition: کنترل‌کننده‌ای که ورودی‌ها را به فرمان فشار و درگیری تبدیل می‌کند.
-  - id: solenoid
-    fa: شیر برقی
-    en: solenoid valve
-    definition: عملگر الکترومغناطیسی برای تنظیم مسیر یا فشار هیدرولیک.
-  - id: dct
-    fa: گیربکس دوکلاچه
-    en: dual-clutch transmission (DCT)
-    definition: گیربکس دارای دو زیرگیربکس و دو کلاچ برای مسیرهای متناوب دنده.
-  - id: preselection
-    fa: پیش‌انتخاب
-    en: preselection
-    definition: آماده‌کردن دندهٔ بعدی در زیرگیربکس بی‌بار پیش از تحویل گشتاور.
-  - id: cvt
-    fa: گیربکس پیوسته‌متغیر
-    en: continuously variable transmission (CVT)
-    definition: معماری تغییر نسبت پیوسته در یک بازهٔ محدود.
-  - id: variator
-    fa: واریاتور
-    en: variator
-    definition: واحد دو پولی و عضو انعطاف‌پذیر که نسبت CVT را ایجاد می‌کند.
-  - id: effective-radius
-    fa: شعاع مؤثر
-    en: effective running radius
-    definition: فاصلهٔ محور پولی تا مسیر انتقال سرعت مماسی عضو انعطاف‌پذیر.
-  - id: clamping-force
-    fa: نیروی گیره‌ای
-    en: clamping force
-    definition: نیروی محوری پولی برای ایجاد ظرفیت انتقال نیرو بدون لغزش زیان‌آور.
-  - id: reduction-ratio
-    fa: نسبت کاهش دور
-    en: reduction ratio
-    definition: نسبت سرعت ورودی به خروجی با قرارداد i = n_in / n_out.
-  - id: ratio-spread
-    fa: گسترهٔ نسبت
-    en: ratio spread
-    definition: نسبت بزرگ‌ترین نسبت کاهش قابل دسترس به کوچک‌ترین آن.
+  - {id: engine, fa: "موتور", en: "engine", definition: "ماشین تبدیل انرژی به کار مکانیکی؛ در این کتاب عمدتاً موتور احتراق داخلی."}
+  - {id: powertrain, fa: "مسیر انتقال توان", en: "driveline / powertrain", definition: "زنجیرهٔ تولید و انتقال توان تا چرخ؛ مرز دقیق دو واژه متن‌وابسته است."}
+  - {id: sensor, fa: "حسگر", en: "sensor", definition: "مبدل کمیت فیزیکی یا شیمیایی به سیگنال قابل پردازش."}
+  - {id: controller, fa: "کنترل‌کننده", en: "controller / control unit", definition: "واحد تبدیل ورودی‌ها و راهبرد به فرمان."}
+  - {id: actuator, fa: "عملگر", en: "actuator", definition: "عنصر تبدیل فرمان به اثر فیزیکی."}
+  - {id: feedback, fa: "بازخورد", en: "feedback", definition: "بازگرداندن اطلاعات خروجی برای سنجش و اصلاح رفتار."}
+  - {id: piston, fa: "پیستون", en: "piston", definition: "عضو متحرک سیلندر که فشار گاز و نیروی مکانیکی را مبادله می‌کند."}
+  - {id: four-stroke, fa: "چرخهٔ چهارزمانه", en: "four-stroke cycle", definition: "چرخهٔ مکش، تراکم، توان و تخلیه در دو دور میل‌لنگ."}
+  - {id: tdc, fa: "نقطهٔ مرگ بالا", en: "top dead centre (TDC)", definition: "بالاترین موقعیت مرجع پیستون در سیلندر."}
+  - {id: bdc, fa: "نقطهٔ مرگ پایین", en: "bottom dead centre (BDC)", definition: "پایین‌ترین موقعیت مرجع پیستون در سیلندر."}
+  - {id: stroke, fa: "کورس", en: "stroke", definition: "فاصلهٔ حرکت پیستون میان دو نقطهٔ مرگ."}
+  - {id: bore, fa: "قطر سیلندر", en: "cylinder bore", definition: "قطر داخلی مرجع سیلندر."}
+  - {id: clearance-volume, fa: "حجم لقی", en: "clearance volume", definition: "حجم باقی‌ماندهٔ محفظه در نقطهٔ مرگ بالا."}
+  - {id: compression-ratio, fa: "نسبت تراکم هندسی", en: "geometric compression ratio", definition: "نسبت حجم بیشینه به کمینهٔ محفظهٔ سیلندر."}
+  - {id: torque, fa: "گشتاور", en: "torque", definition: "ممان پیچاننده؛ حاصل نیرو و بازوی عمود آن."}
+  - {id: firing-order, fa: "ترتیب احتراق", en: "firing order", definition: "ترتیب رخداد توان سیلندرها طبق شماره‌گذاری سازنده."}
+  - {id: wankel, fa: "موتور وانکل", en: "Wankel rotary engine", definition: "موتور دورانی با روتور و محفظه‌های تغییرحجم‌دهنده."}
+  - {id: valvetrain, fa: "قطار سوپاپ", en: "valvetrain", definition: "مجموعهٔ ایجاد و انتقال حرکت برای کنترل سوپاپ‌ها."}
+  - {id: ohv, fa: "سوپاپ‌بالا", en: "overhead-valve (OHV)", definition: "معماری با سوپاپ در سرسیلندر و میل‌سوپاپ معمولاً در بلوک."}
+  - {id: ohc, fa: "میل‌سوپاپ‌بالا", en: "overhead camshaft (OHC)", definition: "معماری با میل‌سوپاپ روی سرسیلندر."}
+  - {id: overlap, fa: "هم‌پوشانی سوپاپ", en: "valve overlap", definition: "بازبودن هم‌زمان سوپاپ ورودی و خروجی نزدیک مرز تخلیه و مکش."}
+  - {id: volumetric-efficiency, fa: "بازده حجمی", en: "volumetric efficiency", definition: "شاخص پرشدن واقعی سیلندر نسبت به مرجع تعریف‌شده."}
+  - {id: timing-drive, fa: "محرک زمان‌بندی", en: "timing drive", definition: "تسمه، زنجیر یا چرخ‌دندهٔ حفظ نسبت و فاز میل‌لنگ و میل‌سوپاپ."}
+  - {id: cylinder-head, fa: "سرسیلندر", en: "cylinder head", definition: "بخش بالایی شامل محفظه، مجاری و اجزای قطار سوپاپ."}
+  - {id: head-gasket, fa: "واشر سرسیلندر", en: "cylinder-head gasket", definition: "آب‌بند اتصال بلوک و سرسیلندر برای گاز، روغن و خنک‌کننده."}
+  - {id: torque-to-yield, fa: "پیچ کششی کنترل‌شده", en: "torque-to-yield bolt", definition: "پیچی با روش سفت‌کردن و تغییر طول تعیین‌شده توسط سازنده."}
+  - {id: compression-ring, fa: "رینگ تراکم", en: "compression ring", definition: "رینگ محدودکنندهٔ عبور گاز و انتقال‌دهندهٔ بخشی از گرمای پیستون."}
+  - {id: oil-control-ring, fa: "رینگ روغن", en: "oil-control ring", definition: "رینگ تنظیم‌کنندهٔ مقدار روغن روی دیوارهٔ سیلندر."}
+  - {id: crankshaft, fa: "میل‌لنگ", en: "crankshaft", definition: "محور تبدیل‌کنندهٔ نیروی رفت‌وبرگشتی به گشتاور دورانی."}
+  - {id: connecting-rod, fa: "شاتون", en: "connecting rod", definition: "عضو رابط پیستون و لنگ میل‌لنگ."}
+  - {id: piston-pin, fa: "گژن‌پین", en: "piston pin / gudgeon pin", definition: "پین اتصال پیستون و سر کوچک شاتون."}
+  - {id: main-bearing, fa: "یاتاقان ثابت", en: "main bearing", definition: "یاتاقان نگه‌دارندهٔ محور اصلی میل‌لنگ در بلوک."}
+  - {id: rod-bearing, fa: "یاتاقان متحرک", en: "connecting-rod bearing", definition: "یاتاقان میان سر بزرگ شاتون و لنگ."}
+  - {id: hydrodynamic-lubrication, fa: "روان‌کاری هیدرودینامیکی", en: "hydrodynamic lubrication", definition: "تولید فشار فیلم با حرکت نسبی و گوهٔ سیال."}
+  - {id: boundary-lubrication, fa: "روان‌کاری مرزی", en: "boundary lubrication", definition: "رژیم فیلم بسیار نازک با نقش مهم افزودنی و روکش سطح."}
+  - {id: counterweight, fa: "وزنهٔ تعادل", en: "counterweight", definition: "جرم روی میل‌لنگ برای مدیریت نیرو و ممان اینرسی."}
+  - {id: flywheel, fa: "فلایویل", en: "flywheel", definition: "جرم دورانی ذخیره‌کننده و پس‌دهندهٔ انرژی در چرخه."}
+  - {id: cylinder-liner, fa: "بوش سیلندر", en: "cylinder liner", definition: "سطح استوانه‌ای جداگانه برای حرکت پیستون و تماس رینگ."}
+  - {id: api-category, fa: "ردهٔ خدمت API", en: "API service category", definition: "ردهٔ عملکرد و کاربرد روغن موتور در نظام مؤسسهٔ نفت آمریکا."}
+  - {id: sae-grade, fa: "گرید گرانروی SAE", en: "SAE viscosity grade", definition: "طبقه‌بندی رفتار گرانروی در آزمون‌های دمایی مشخص."}
+  - {id: full-flow-filter, fa: "فیلتر تمام‌جریان", en: "full-flow oil filter", definition: "فیلتر قرارگرفته در مسیر اصلی روغن در آرایش متداول."}
+  - {id: pressure-relief, fa: "شیر تنظیم فشار", en: "pressure-relief / regulating valve", definition: "سوپاپ محدودکنندهٔ فشار با منحرف‌کردن بخشی از دبی."}
+  - {id: filter-bypass, fa: "بای‌پس فیلتر", en: "filter bypass valve", definition: "مسیر عبور هنگام اختلاف فشار بیش از حد فیلتر."}
+  - {id: coolant-pump, fa: "پمپ خنک‌کننده", en: "coolant pump / water pump", definition: "پمپ گردش سیال در مدار خنک‌کاری."}
+  - {id: thermostat, fa: "ترموستات", en: "thermostat", definition: "شیر دماپاسخ برای تنظیم مسیر جریان خنک‌کننده."}
+  - {id: pressure-cap, fa: "درپوش فشار", en: "pressure cap", definition: "درپوش سوپاپ‌دار برای مدیریت فشار و بازگشت سیال مدار."}
+  - {id: ecu, fa: "واحد کنترل موتور", en: "engine control unit (ECU)", definition: "کنترل‌کنندهٔ الکترونیکی سوخت، جرقه، هوا و پایش موتور."}
+  - {id: octane, fa: "عدد اکتان", en: "octane rating", definition: "شاخص مقاومت سوخت در برابر کوبش در آزمون استاندارد."}
+  - {id: knock, fa: "کوبش", en: "engine knock / detonation", definition: "خوداشتعالی نامطلوب بخش انتهایی مخلوط پس از آغاز احتراق."}
+  - {id: ckp, fa: "حسگر موقعیت میل‌لنگ", en: "crankshaft position sensor (CKP)", definition: "حسگر مرجع سرعت و زاویهٔ میل‌لنگ."}
+  - {id: cmp, fa: "حسگر موقعیت میل‌سوپاپ", en: "camshaft position sensor (CMP)", definition: "حسگر فاز چرخه و میل‌سوپاپ."}
+  - {id: cts, fa: "حسگر دمای خنک‌کننده", en: "coolant temperature sensor (CTS/ECT)", definition: "حسگر دمای سیال موتور برای کنترل و پایش."}
+  - {id: oxygen-sensor, fa: "حسگر اکسیژن", en: "oxygen / lambda sensor", definition: "حسگر اکسیژن باقیمانده یا وضعیت نسبت هم‌ارزی گاز خروجی."}
+  - {id: fuel-pump, fa: "پمپ سوخت", en: "fuel pump", definition: "پمپ انتقال سوخت و تأمین ظرفیت فشار مدار."}
+  - {id: injector, fa: "انژکتور", en: "fuel injector", definition: "شیر کنترل‌شدهٔ اندازه‌گیری و پاشش سوخت."}
+  - {id: ignition-coil, fa: "کویل جرقه", en: "ignition coil", definition: "مبدل ذخیرهٔ انرژی مغناطیسی و تولید ولتاژ جرقه."}
+  - {id: spark-plug, fa: "شمع", en: "spark plug", definition: "عنصر ایجاد جرقه در محفظهٔ احتراق."}
+  - {id: three-way-catalyst, fa: "کاتالیست سه‌راهه", en: "three-way catalytic converter", definition: "کاتالیست اکسایش CO و HC و کاهش NOx نزدیک شرایط هدف."}
+  - {id: purge-valve, fa: "شیر تخلیهٔ کنیستر", en: "canister purge valve", definition: "شیر کنترل ورود بخار ذخیره‌شدهٔ سوخت به موتور."}
+  - {id: mil, fa: "چراغ هشدار عیب", en: "malfunction indicator lamp (MIL)", definition: "چراغ اعلام عیب پایش‌شدهٔ سامانهٔ آلایندگی/کنترل."}
+  - {id: dtc, fa: "کد عیب", en: "diagnostic trouble code (DTC)", definition: "کد ثبت شرط تشخیص و ناحیهٔ مربوط؛ نه حکم قطعهٔ معیوب."}
+  - {id: immobilizer, fa: "ایموبلایزر", en: "immobilizer", definition: "سامانهٔ اجازهٔ راه‌اندازی بر پایهٔ شناسهٔ معتبر."}
+  - {id: rwd, fa: "محرک عقب", en: "rear-wheel drive (RWD)", definition: "چیدمان با چرخ‌های عقب به‌عنوان مسیر اصلی پیشرانش."}
+  - {id: fwd, fa: "محرک جلو", en: "front-wheel drive (FWD)", definition: "چیدمان با چرخ‌های جلو به‌عنوان مسیر اصلی پیشرانش."}
+  - {id: awd, fa: "تمام‌چرخ محرک", en: "all-wheel drive (AWD)", definition: "توزیع گشتاور به هر دو محور با معماری و راهبرد طراحی‌وابسته."}
+  - {id: four-wheel-drive, fa: "چهارچرخ محرک", en: "four-wheel drive (4WD)", definition: "نام رایج سامانهٔ دو‌محوره، اغلب با حالت‌های انتخابی یا کار سنگین."}
+  - {id: load-transfer, fa: "انتقال بار", en: "load transfer", definition: "تغییر توزیع نیروی عمودی تایرها بر اثر شتاب و هندسه."}
+  - {id: friction-clutch, fa: "کلاچ اصطکاکی", en: "friction clutch", definition: "کلاچ انتقال گشتاور با سطوح اصطکاکی و نیروی گیره."}
+  - {id: spur-gear, fa: "چرخ‌دندهٔ ساده", en: "spur gear", definition: "چرخ‌دنده با دندانهٔ مستقیم موازی محور."}
+  - {id: helical-gear, fa: "چرخ‌دندهٔ مارپیچ", en: "helical gear", definition: "چرخ‌دنده با دندانهٔ مایل و نیروی محوری."}
+  - {id: synchronizer, fa: "هم‌دورکن", en: "synchronizer", definition: "سازوکار نزدیک‌کردن دور و قفل‌کردن چرخ‌دنده به محور."}
+  - {id: transaxle, fa: "ترنس‌اکسل", en: "transaxle", definition: "مجموعهٔ یکپارچهٔ گیربکس، گردانندهٔ نهایی و دیفرانسیل."}
+  - {id: propeller-shaft, fa: "میل‌گاردان", en: "propeller shaft / driveshaft", definition: "محور انتقال طولی گشتاور."}
+  - {id: universal-joint, fa: "چهارشاخ گاردان", en: "universal joint (U-joint)", definition: "مفصل انتقال دوران میان محورهای زاویه‌دار."}
+  - {id: sliding-spline, fa: "اتصال کشویی هزارخار", en: "sliding spline / slip yoke", definition: "اتصال پذیرندهٔ تغییر طول مؤثر مسیر گاردان."}
+  - {id: final-drive, fa: "گردانندهٔ نهایی", en: "final drive", definition: "آخرین مرحلهٔ کاهش دور پیش از دیفرانسیل یا چرخ‌ها."}
+  - {id: hypoid-gear, fa: "چرخ‌دندهٔ هیپوئید", en: "hypoid gear", definition: "جفت چرخ‌دنده با محورهای نامتقاطع و لغزش نسبی قابل توجه."}
+  - {id: open-differential, fa: "دیفرانسیل باز", en: "open differential", definition: "سازوکار پذیرندهٔ اختلاف دور دو خروجی با ظرفیت بایاس محدود."}
+  - {id: half-shaft, fa: "نیم‌محور یا پلوس", en: "half shaft / axle shaft", definition: "محور انتقال گشتاور از دیفرانسیل تا توپی چرخ."}
+  - {id: cv-joint, fa: "مفصل سرعت ثابت", en: "constant-velocity joint (CV joint)", definition: "مفصل انتقال دوران در زاویه با نوسان کم سرعت خروجی."}
+  - {id: torque-converter, fa: "مبدل گشتاور", en: "torque converter", definition: "کوپلینگ هیدرودینامیکی دارای پمپ، توربین و استاتور."}
+  - {id: lockup-clutch, fa: "کلاچ قفل‌کن", en: "lock-up clutch", definition: "مسیر اصطکاکی کنترل‌شده برای کم‌کردن لغزش مبدل."}
+  - {id: planetary-gearset, fa: "مجموعهٔ سیاره‌ای", en: "planetary gearset", definition: "مجموعهٔ هم‌محور خورشیدی، رینگی، سیاره‌ها و حامل."}
+  - {id: friction-element, fa: "عنصر اصطکاکی", en: "friction element", definition: "کلاچ یا ترمزی که مسیر توان یا قید حرکتی را برقرار می‌کند."}
+  - {id: tcu, fa: "واحد کنترل گیربکس", en: "transmission control unit (TCU)", definition: "کنترل‌کنندهٔ تبدیل دادهٔ حسگرها به فرمان فشار و درگیری."}
+  - {id: solenoid, fa: "شیر برقی", en: "solenoid valve", definition: "عملگر الکترومغناطیسی برای تنظیم مسیر یا فشار هیدرولیک."}
+  - {id: dct, fa: "گیربکس دوکلاچه", en: "dual-clutch transmission (DCT)", definition: "دو زیرگیربکس با کلاچ‌های جدا برای مسیرهای متناوب دنده."}
+  - {id: preselection, fa: "پیش‌انتخاب", en: "preselection", definition: "آماده‌کردن دندهٔ بعدی در مسیر بی‌بار پیش از تحویل گشتاور."}
+  - {id: cvt, fa: "گیربکس پیوسته‌متغیر", en: "continuously variable transmission (CVT)", definition: "معماری تغییر پیوستهٔ نسبت در یک بازهٔ محدود."}
+  - {id: variator, fa: "واریاتور", en: "variator", definition: "واحد پولی و عضو انعطاف‌پذیر سازندهٔ نسبت پیوسته."}
+  - {id: effective-radius, fa: "شعاع مؤثر", en: "effective running radius", definition: "فاصلهٔ محور پولی تا مسیر انتقال سرعت مماسی."}
+  - {id: clamping-force, fa: "نیروی گیره‌ای", en: "clamping force", definition: "نیروی محوری پولی برای ایجاد ظرفیت تماس کافی."}
+  - {id: reduction-ratio, fa: "نسبت کاهش دور", en: "reduction ratio", definition: "قرارداد نسبت سرعت ورودی به خروجی؛ مقدار بالای یک یعنی خروجی کندتر."}
+  - {id: ratio-spread, fa: "گسترهٔ نسبت", en: "ratio spread", definition: "نسبت بزرگ‌ترین نسبت کاهش قابل دسترس به کوچک‌ترین آن."}
+  - {id: brake-booster, fa: "بوستر ترمز", en: "brake booster", definition: "تقویت‌کنندهٔ نیروی پدال با خلأ یا منبع توان کمکی."}
+  - {id: tandem-master, fa: "سیلندر اصلی دومداره", en: "tandem master cylinder", definition: "سیلندر اصلی دارای دو مدار هیدرولیکی ترمز."}
+  - {id: disc-brake, fa: "ترمز دیسکی", en: "disc brake", definition: "ترمز با لنت و دیسک دوار."}
+  - {id: drum-brake, fa: "ترمز کاسه‌ای", en: "drum brake", definition: "ترمز با کفشک و سطح داخلی کاسه."}
+  - {id: abs, fa: "ترمز ضدقفل", en: "anti-lock braking system (ABS)", definition: "سامانهٔ مدولاسیون فشار برای جلوگیری از قفل پایدار چرخ."}
+  - {id: ebd, fa: "توزیع الکترونیکی نیروی ترمز", en: "electronic brake-force distribution (EBD)", definition: "تنظیم الکترونیکی سهم فشار یا نیروی ترمز محورها و چرخ‌ها."}
+  - {id: ackermann, fa: "هندسهٔ آکرمن", en: "Ackermann steering geometry", definition: "رابطهٔ هندسی زاویهٔ متفاوت چرخ داخلی و بیرونی در پیچ."}
+  - {id: steering-ratio, fa: "نسبت فرمان", en: "steering ratio", definition: "نسبت زاویهٔ غربیلک به زاویهٔ چرخ هدایت‌شونده."}
+  - {id: four-wheel-steering, fa: "فرمان چهارچرخ", en: "four-wheel steering (4WS)", definition: "فرمان‌دهی کنترل‌شده به محور جلو و عقب."}
+  - {id: tcs, fa: "کنترل کشش", en: "traction control system (TCS)", definition: "کنترل لغزش بیش از حد چرخ محرک."}
+  - {id: esc, fa: "کنترل پایداری الکترونیکی", en: "electronic stability control (ESC)", definition: "کنترل حرکت yaw با ترمز انتخابی و مدیریت گشتاور."}
+  - {id: suspension, fa: "سامانهٔ تعلیق", en: "suspension system", definition: "مجموعهٔ هدایت حرکت چرخ و کنترل ارتعاش بدنه."}
+  - {id: sprung-mass, fa: "جرم فنربندی‌شده", en: "sprung mass", definition: "جرم حمایت‌شده توسط عناصر فنری."}
+  - {id: unsprung-mass, fa: "جرم فنربندی‌نشده", en: "unsprung mass", definition: "جرم نزدیک چرخ که عمدتاً همراه ناهمواری حرکت می‌کند."}
+  - {id: macpherson, fa: "استرات مک‌فرسون", en: "MacPherson strut", definition: "تعلیق مستقل با استرات به‌عنوان عضو هدایت و فنر/دمپر."}
+  - {id: solid-axle, fa: "محور صلب", en: "solid / live axle", definition: "محور پیونددهندهٔ حرکت دو چرخ؛ گونهٔ محرک را live axle نیز می‌نامند."}
+  - {id: hub, fa: "توپی چرخ", en: "wheel hub", definition: "عضو نگه‌دارندهٔ چرخ و انتقال‌دهندهٔ بار یا گشتاور."}
+  - {id: knuckle, fa: "سگدست", en: "steering knuckle", definition: "رابط توپی، تعلیق و فرمان."}
+  - {id: control-arm, fa: "طبق یا بازوی کنترل", en: "control arm", definition: "بازوی هدایت‌کنندهٔ موقعیت چرخ."}
+  - {id: ball-joint, fa: "سیبک", en: "ball joint", definition: "مفصل کروی پذیرندهٔ دوران چندمحوره."}
+  - {id: camber, fa: "کمبر", en: "camber angle", definition: "شیب صفحهٔ چرخ نسبت به قائم در نمای روبه‌رو."}
+  - {id: caster, fa: "کستر", en: "caster angle", definition: "شیب محور فرمان در نمای جانبی."}
+  - {id: toe, fa: "تو", en: "toe angle", definition: "جهت صفحهٔ چرخ نسبت به محور طولی در نمای بالا."}
+  - {id: air-spring, fa: "فنر بادی", en: "air spring", definition: "عنصر الاستیک گازی برای تحمل بار و کنترل ارتفاع یا نرخ."}
+  - {id: damper, fa: "دمپر یا کمک‌فنر", en: "damper / shock absorber", definition: "عنصر تبدیل انرژی حرکت تعلیق به گرما."}
+  - {id: body-on-frame, fa: "بدنه روی شاسی مستقل", en: "body-on-frame", definition: "معماری بدنهٔ نصب‌شده روی قاب باربر جدا."}
+  - {id: unibody, fa: "بدنهٔ یکپارچه", en: "unibody / unitized body", definition: "پوستهٔ بدنهٔ یکپارچه و باربر."}
+  - {id: ahss, fa: "فولاد پرمقاومت پیشرفته", en: "advanced high-strength steel (AHSS)", definition: "خانوادهٔ فولادهای با استحکام و رفتار شکل‌دهی مهندسی‌شده."}
+  - {id: crumple-zone, fa: "ناحیهٔ مچاله‌شونده", en: "crumple zone", definition: "ناحیهٔ تغییرشکل کنترل‌شده برای جذب انرژی برخورد."}
+  - {id: passive-safety, fa: "ایمنی غیرفعال", en: "passive safety", definition: "سازوکارهای کاهش پیامد برخورد هنگام و پس از وقوع آن."}

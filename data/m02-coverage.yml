@@ -1,0 +1,19 @@
+schema_version: 1
+module: M02
+status: published
+entries:
+  - {id: S01-C01, source: S01, anchor: m02-map, status: published}
+  - {id: S01-C02, source: S01, anchor: m02-arrangements, status: published}
+  - {id: S01-C03, source: S01, anchor: m02-four-stroke, status: published}
+  - {id: S01-C04, source: S01, anchor: m02-four-stroke, status: published}
+  - {id: S01-C05, source: S01, anchor: m02-geometry, status: published}
+  - {id: S01-C06, source: S01, anchor: m02-geometry, status: published}
+  - {id: S01-C07, source: S01, anchor: m02-geometry, status: published}
+  - {id: S01-C08, source: S01, anchor: m02-torque-power, status: published}
+  - {id: S01-C09, source: S01, anchor: m02-arrangements, status: published}
+  - {id: S02-C01, source: S02, anchor: m02-four-stroke, status: published}
+  - {id: S02-C07, source: S02, anchor: m02-multicylinder, status: published}
+  - {id: S02-C08, source: S02, anchor: m02-multicylinder, status: published}
+  - {id: S02-C09, source: S02, anchor: m02-multicylinder, status: published}
+  - {id: S02-C10, source: S02, anchor: m02-wankel, status: published}
+  - {id: S02-C11, source: S02, anchor: m02-wankel, status: published}

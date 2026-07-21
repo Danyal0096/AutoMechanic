@@ -1,0 +1,8 @@
+schema_version: 1
+module: M01
+visibility: internal
+questions:
+  - {id: q-m01-01, concepts: [S00-C07], suggested_marks: 15, mode: causal_reasoning}
+  - {id: q-m01-02, concepts: [S00-C05, S00-C06], suggested_marks: 15, mode: comparison}
+  - {id: q-m01-03, concepts: [S00-C03], suggested_marks: 20, mode: calculation}
+  - {id: q-m01-04, concepts: [S00-C07], suggested_marks: 20, mode: fault_isolation}

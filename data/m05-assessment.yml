@@ -1,0 +1,9 @@
+schema_version: 1
+module: M05
+visibility: internal
+questions:
+  - {id: q-m05-01, concepts: [S06-C02, S06-C03, S06-C05], suggested_marks: 15, mode: comparison}
+  - {id: q-m05-02, concepts: [S06-C07, S06-C09, S06-C11, S06-C12], suggested_marks: 20, mode: sequence_reconstruction}
+  - {id: q-m05-03, concepts: [S06-C08], suggested_marks: 15, mode: calculation}
+  - {id: q-m05-04, concepts: [S07-C02, S07-C03, S07-C04], suggested_marks: 20, mode: fault_isolation}
+  - {id: q-m05-05, concepts: [S04-C07, S06-C13], suggested_marks: 20, mode: fault_isolation}

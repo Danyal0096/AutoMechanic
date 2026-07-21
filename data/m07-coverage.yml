@@ -1,0 +1,26 @@
+schema_version: 1
+module: M07
+status: published
+entries:
+  - {id: S09-C01, source: S09, anchor: m07-map, status: published}
+  - {id: S09-C02, source: S09, anchor: m07-layouts, status: published}
+  - {id: S09-C03, source: S09, anchor: m07-layouts, status: published}
+  - {id: S09-C04, source: S09, anchor: m07-layouts, status: published}
+  - {id: S09-C05, source: S09, anchor: m07-layouts, status: published}
+  - {id: S09-C06, source: S09, anchor: m07-layouts, status: published}
+  - {id: S10-C01, source: S10, anchor: m07-clutch, status: published}
+  - {id: S10-C02, source: S10, anchor: m07-clutch, status: published}
+  - {id: S10-C03, source: S10, anchor: m07-clutch, status: published}
+  - {id: S10-C04, source: S10, anchor: m07-clutch, status: published}
+  - {id: S10-C05, source: S10, anchor: m07-clutch, status: published}
+  - {id: S11-C01, source: S11, anchor: m07-gear-ratio, status: published}
+  - {id: S11-C02, source: S11, anchor: m07-gear-ratio, status: published}
+  - {id: S11-C03, source: S11, anchor: m07-gear-ratio, status: published}
+  - {id: S11-C04, source: S11, anchor: m07-gear-ratio, status: published}
+  - {id: S11-C05, source: S11, anchor: m07-three-shaft, status: published}
+  - {id: S11-C06, source: S11, anchor: m07-three-shaft, status: published}
+  - {id: S11-C07, source: S11, anchor: m07-three-shaft, status: published}
+  - {id: S11-C08, source: S11, anchor: m07-two-shaft, status: published}
+  - {id: S11-C09, source: S11, anchor: m07-gear-ratio, status: published}
+  - {id: S12-C01, source: S12, anchor: m07-propeller-shaft, status: published}
+  - {id: S12-C02, source: S12, anchor: m07-propeller-shaft, status: published}

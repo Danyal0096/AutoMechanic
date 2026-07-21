@@ -1,0 +1,25 @@
+schema_version: 1
+module: M09
+status: published
+entries:
+  - {id: S16-C01, source: S16, anchor: m09-brake-force, status: published}
+  - {id: S16-C02, source: S16, anchor: m09-brake-force, status: published}
+  - {id: S16-C03, source: S16, anchor: m09-brake-force, status: published}
+  - {id: S16-C04, source: S16, anchor: m09-wheel-brakes, status: published}
+  - {id: S16-C05, source: S16, anchor: m09-wheel-brakes, status: published}
+  - {id: S16-C06, source: S16, anchor: m09-wheel-brakes, status: published}
+  - {id: S16-C07, source: S16, anchor: m09-tire-limit, status: published}
+  - {id: S16-C08, source: S16, anchor: m09-abs, status: published}
+  - {id: S16-C09, source: S16, anchor: m09-abs, status: published}
+  - {id: S16-C10, source: S16, anchor: m09-abs, status: published}
+  - {id: S17-C01, source: S17, anchor: m09-ackermann, status: published}
+  - {id: S17-C02, source: S17, anchor: m09-ackermann, status: published}
+  - {id: S17-C03, source: S17, anchor: m09-steering-assist, status: published}
+  - {id: S17-C04, source: S17, anchor: m09-steering-assist, status: published}
+  - {id: S17-C05, source: S17, anchor: m09-steering-assist, status: published}
+  - {id: S17-C06, source: S17, anchor: m09-steering-assist, status: published}
+  - {id: S17-C07, source: S17, anchor: m09-steering-assist, status: published}
+  - {id: S17-C08, source: S17, anchor: m09-four-wheel-steering, status: published}
+  - {id: S17-C09, source: S17, anchor: m09-four-wheel-steering, status: published}
+  - {id: S19-C08, source: S19, anchor: m09-abs, status: published}
+  - {id: S19-C09, source: S19, anchor: m09-stability, status: published}

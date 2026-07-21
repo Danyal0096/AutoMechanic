@@ -46,19 +46,20 @@
   pdflang={fa-IR},
   pdfauthor={برگرفته از آموزه‌های استاد نصیری},
   pdftitle={مکانیک خودرو عمومی — برگرفته از آموزه‌های استاد نصیری},
-  pdfsubject={گرداننده نهایی، دیفرانسیل و معماری‌های گیربکس خودکار}
+  pdfsubject={آموزش یکپارچه موتور، انتقال قدرت، شاسی، کنترل و ایمنی خودرو}
 }}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\small\color{AutoMechanicBlue} مکانیک خودرو عمومی}
-\fancyhead[L]{\small\color{AutoMechanicInk} انتقال قدرت}
+\fancyhead[L]{\small\color{AutoMechanicInk} نسخهٔ آموزشی یکپارچه}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.35pt}
 \renewcommand{\footrulewidth}{0pt}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.48em}
+\linespread{1.15}
 \setlength{\emergencystretch}{2.5em}
 \renewcommand{\arraystretch}{1.18}
 \setlength{\tabcolsep}{4.5pt}
@@ -71,6 +72,13 @@
 \widowpenalty=10000
 \displaywidowpenalty=10000
 \raggedbottom
+
+% Keep headings with enough following material and give dense tables a calm,
+% consistent hierarchy without changing their semantic structure.
+\pretocmd{\section}{\Needspace{6\baselineskip}}{}{}
+\pretocmd{\subsection}{\Needspace{5\baselineskip}}{}{}
+\pretocmd{\subsubsection}{\Needspace{4\baselineskip}}{}{}
+\AtBeginEnvironment{longtable}{\small}
 
 \makeatletter
 \renewcommand{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi
