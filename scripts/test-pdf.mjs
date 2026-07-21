@@ -59,6 +59,9 @@ const extracted = existsSync(textFile) ? readFileSync(textFile, "utf8") : "";
 const normalizedExtracted = extracted.normalize("NFKC");
 check("Persian module content remains extractable", normalizedExtracted.includes("دیفرانسیل") && normalizedExtracted.includes("گرداننده") && normalizedExtracted.includes("پاسخ"), `${extracted.length} characters`);
 check("mixed-direction technical terms remain extractable", /CVT/.test(normalizedExtracted) && /DCT/.test(normalizedExtracted) && /TCU/.test(normalizedExtracted));
+check("PDF exposes no internal production IDs", !/(LO-M08-|S1[2-5]-C\d+|Approval Gate|Phase\s*\d)/.test(normalizedExtracted));
+check("PDF exposes no malformed author-date residue", !/\bn\.d\.(?:-[a-z])?|AMEG\s+n\.d\./i.test(normalizedExtracted));
+check("PDF bibliography exposes no raw URL clutter", !/https?:\/\//i.test(normalizedExtracted));
 
 const blankPages = [];
 for (let page = 1; page <= pages; page += 1) {

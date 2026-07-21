@@ -3,10 +3,8 @@
   if (!lab) return;
 
   const slider = lab.querySelector("[data-cvt-slider]");
-  const inputCircle = lab.querySelector("[data-input-radius]");
-  const outputCircle = lab.querySelector("[data-output-radius]");
-  const inputLabel = lab.querySelector("[data-input-label]");
-  const outputLabel = lab.querySelector("[data-output-label]");
+  const inputRadiusLabel = lab.querySelector("[data-input-radius]");
+  const outputRadiusLabel = lab.querySelector("[data-output-radius]");
   const ratioLabel = lab.querySelector("[data-ratio]");
   const speedLabel = lab.querySelector("[data-speed]");
   const stateLabel = lab.querySelector("[data-state]");
@@ -18,10 +16,8 @@
     const reduction = outputRadius / inputRadius;
     const speedRatio = inputRadius / outputRadius;
 
-    inputCircle.setAttribute("r", inputRadius.toFixed(1));
-    outputCircle.setAttribute("r", outputRadius.toFixed(1));
-    inputLabel.textContent = `${inputRadius.toFixed(0)} mm`;
-    outputLabel.textContent = `${outputRadius.toFixed(0)} mm`;
+    inputRadiusLabel.textContent = inputRadius.toFixed(0);
+    outputRadiusLabel.textContent = outputRadius.toFixed(0);
     ratioLabel.textContent = reduction.toFixed(2);
     speedLabel.textContent = speedRatio.toFixed(2);
 

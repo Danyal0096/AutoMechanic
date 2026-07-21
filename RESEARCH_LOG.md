@@ -35,12 +35,29 @@
 | فصل‌ها و ساختار پروژه چگونه تعریف می‌شوند؟ | [Quarto Book Structure](https://quarto.org/docs/books/book-structure.html) | `_quarto.yml` ترتیب chapters/parts و تنظیمات سطح کتاب را کنترل می‌کند. | ساختار `content/` و manifest مرکزی. |
 | شکل، جدول و معادله چگونه قابل ردیابی‌اند؟ | [Quarto Book Cross-references](https://quarto.org/docs/books/book-crossrefs.html) | شناسه و cross-reference بومی برای شکل/جدول/معادله فراهم است. | منع شماره‌گذاری دستی و تست ارجاعات. |
 | جهت پایهٔ HTML و محتوای mixed-direction چگونه کنترل می‌شود؟ | [Quarto HTML Options](https://quarto.org/docs/reference/formats/html.html) | گزینهٔ `dir` جهت پایه را تعیین می‌کند و span/divهای native Pandoc امکان override محلی دارند. | `dir: rtl` و wrapperهای LTR برای کد، فرمول، URL و رشته‌های فنی. |
-| footnote و citation چگونه تولید شوند؟ | [Quarto Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)، [Quarto Citations](https://quarto.org/docs/authoring/citations.html) | syntax استاندارد Markdown/Pandoc برای پاورقی و کتاب‌نامه، قابل اشتراک میان خروجی‌هاست. | سیاست پاورقی ترجمه و BibTeX/CSL. |
+| footnote و citation چگونه تولید شوند؟ | [Quarto Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html)، [Quarto Citations](https://quarto.org/docs/authoring/citations.html) | syntax استاندارد Markdown/Pandoc برای پاورقی و کتاب‌نامه قابل اشتراک میان خروجی‌هاست؛ نمایش خودکار CSL در RTL باید با خروجی واقعی سنجیده شود. | پاورقی استاندارد؛ رکورد BibTeX برای ممیزی و نشانگر/کتاب‌نامهٔ عددی QMD برای نمایش خوانای corrective sample. |
 | PDF کتاب چگونه تولید شود؟ | [Quarto PDF Basics](https://quarto.org/docs/output-formats/pdf-basics.html)، [PDF Options](https://quarto.org/docs/reference/formats/pdf.html) | PDF از موتورهای TeX قابل تولید است؛ برای bidi، XeLaTeX گزینهٔ مناسب مستندشده است. | XeLaTeX به‌عنوان مسیر پیشنهادی PDF. |
 | حروف‌چینی فارسی در TeX چگونه پشتیبانی شود؟ | [CTAN — XePersian](https://ctan.org/pkg/xepersian?lang=en) | XePersian حروف‌چینی فارسی/انگلیسی بر پایهٔ XeTeX/LuaTeX را فراهم می‌کند. | PDF RTL، ارقام/فونت و متن دو‌جهته در نمونه آزموده می‌شود. |
 | نسخهٔ فعلی Quarto چیست؟ | [Quarto Download](https://quarto.org/docs/download/) | صفحهٔ رسمی هنگام ممیزی نسخهٔ 1.9 را ارائه می‌کرد. | Quarto 1.9.38 و Pandoc 3.8.3 در نمونه اثبات و برای pin در Gate 2 پیشنهاد شدند. |
 | آزمون دیداری چگونه پایدار شود؟ | [Playwright Visual Comparisons](https://playwright.dev/docs/test-snapshots) | snapshot تصویر و آستانهٔ تفاوت برای regression بصری پشتیبانی می‌شود. | viewportهای RTL و صفحه‌های حساس در Test Plan. |
 | دسترس‌پذیری و ساختار ARIA چگونه کنترل شود؟ | [Playwright Accessibility Testing](https://playwright.dev/docs/accessibility-testing)، [ARIA Snapshots](https://playwright.dev/docs/aria-snapshots) | ترکیب axe با تست و snapshot ساختار دسترس‌پذیر برای regression ممکن است. | تست عنوان‌ها، landmarkها، alt و تعامل کیبورد. |
+
+## پژوهش رسانهٔ اصلاحی M08
+
+این جست‌وجو پس از رد شش SVG baseline انجام شد. پذیرش صرفاً بر مبنای «پیداشدن
+تصویر» نبود؛ دقت، خوانایی و اجازهٔ استفاده باید هم‌زمان روشن می‌بود.
+
+| نیاز | candidateهای معتبر | نتیجهٔ مجوز/کیفیت | تصمیم |
+|---|---|---|---|
+| اجزای دیفرانسیل | [Differential gear (PSF)](https://commons.wikimedia.org/wiki/File:Differential_gear_(PSF).png)، Pearson Scott Foresman | مالکیت عمومی؛ اجازه در VRT؛ اجزا برای درس قابل تشخیص | استفاده بدون تغییر |
+| مجموعهٔ سیاره‌ای | [Epicyclic Gearing Stationary](https://commons.wikimedia.org/wiki/File:Epicyclic_Gearing_Stationary.svg)، Jahobr | CC0 1.0؛ هندسه روشن | استفاده؛ فقط تغییر پالت، بدون تغییر هندسه |
+| معماری DCT | [Dual-clutch transmission](https://commons.wikimedia.org/wiki/File:Dual-clutch_transmission.svg)، Xavax/C-Lover | وقف مالکیت عمومی؛ دو کلاچ، محور توخالی و مسیرهای فرد/زوج خوانا | استفاده بدون تغییر |
+| مبدل گشتاور | Schaeffler/ZF official media و یک cross-section در Commons | منابع صنعتی حق بازنشر روشن نداشتند؛ candidate آزاد قفل‌کن و هدف کامل درس را نشان نمی‌داد | تصویر حذف؛ توالی سه‌حالته و مثال لغزش |
+| CVT | Bosch Pushbelt و Audi Multitronic chain در Commons | منبع رسمی حق بازنشر روشن نداشت؛ عکس آزاد فقط زنجیر را نشان می‌داد و شعاع مؤثر را آموزش نمی‌داد | تصویر حذف؛ معادله، جدول دوحالت و محاسبه‌گر عددی |
+| نقشهٔ کل سامانه | رسانهٔ component-specific برای مسیر کامل وجود نداشت | ترکیب عکس‌ها رابطهٔ علت/مسیر را روشن‌تر نمی‌کرد | جریان متنی انتزاعی، بدون هندسهٔ قطعه |
+
+metadata کامل سه فایل پذیرفته‌شده در `MEDIA_SOURCES.md` و notice حقوقی در
+`THIRD_PARTY_NOTICES.md` ثبت شده است.
 
 ## گزینه‌های بررسی‌شده و کنارگذاشته‌شده
 
@@ -52,13 +69,15 @@
 | SPA/React برای کتاب | محتوای عمدتاً خطی و ایستا به پیچیدگی hydration و build app نیاز ندارد؛ HTML ایستا جست‌وجوپذیر و کم‌ریسک‌تر است. |
 | فصل‌های تازهٔ EV/Hybrid/CAN/ADAS پیشرفته | خارج از دامنهٔ ۲۰ منبع؛ در `ISSUE_LEDGER.md` به‌عنوان expansion ردشده ثبت شده است. |
 
-## نتیجهٔ راستی‌آزمایی Phase 3
+## نتیجهٔ راستی‌آزمایی Phase 3 و اصلاح Gate 2
 
-- شش شکل اولویت‌دار M08 به‌صورت SVG اصیل ساخته و بدون بازنشر تصویر مبدأ در `MEDIA_SOURCES.md` ثبت شدند.
+- شش SVG سفارشی baseline نخست ساخته شده بودند، اما بازبینی انسانی آن‌ها را رد
+  کرد؛ هر شش حذف شدند. corrective sample سه رسانهٔ موجود با مجوز روشن دارد و
+  سه نیاز دیگر را غیرتصویری حل می‌کند.
 - Vazirmatn 33.0.3 با مجوز OFL، فایل‌های محلی وب/PDF و آزمون embedding/subset انتخاب شد.
-- معادلات CVT از برابری سرعت مماسی در دو شعاع مؤثر بازاستنتاج شدند؛ قرارداد نسبت، بازده و مرز فرمول نیروی گیره‌ای در متن، شکل، مثال و آزمون تعاملی یکسان است.
+- معادلات CVT از برابری سرعت مماسی در دو شعاع مؤثر بازاستنتاج شدند؛ قرارداد نسبت، بازده و مرز فرمول نیروی گیره‌ای در متن، جدول دوحالت، مثال و محاسبه‌گر عددی یکسان است و هیچ شکل هندسی ساختگی باقی نمانده است.
 - استاندارد پاورقی نخستین کاربرد و واژه‌نامه با ۱۸ پاورقی و ۲۰ مدخل واقعی آزموده شد.
-- proof-of-concept مشترک Quarto→HTML/XeLaTeX اجرا شد؛ RTL، bidi، پاورقی، responsive web و PDF رسمی در `PHASE3_AUDIT.md` شواهد pass دارند.
+- proof-of-concept مشترک Quarto→HTML/XeLaTeX اجرا شد؛ RTL، bidi، پاورقی، responsive web و PDF رسمی در `PHASE3_AUDIT.md` شواهد اصلاحی دارند. pass خودکار وب approval انسانی نیست و بازبینی مستقل آن به Codex واگذار شده است.
 
 ## پژوهش باقی‌مانده پس از Gate 2
 

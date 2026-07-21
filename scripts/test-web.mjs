@@ -130,6 +130,12 @@ try {
           const backrefs = await page.locator("a.footnote-back").count();
           check(`chromium: footnotes and backlinks rendered`, footnotes === 18 && backrefs >= 18, `${footnotes}/${backrefs}`);
 
+          const visibleText = await page.locator("main").innerText();
+          check("chromium: no internal production IDs are visible", !/(LO-M08-|S1[2-5]-C\d+|Approval Gate|Phase\s*\d)/.test(visibleText));
+          check("chromium: no author-date or n.d. residue is visible", !/\bn\.d\.(?:-[a-z])?|\([A-Z][^)]*\d{4}\)/i.test(visibleText));
+          const citationLabels = await page.locator(".citation").allTextContents();
+          check("chromium: lesson citations are compact numeric markers", citationLabels.length > 0 && citationLabels.every((label) => /^\[\d+(?:[–,-]\d+)*\]$/.test(label.trim())), citationLabels.join(" "));
+
           const ltrDirection = await page.locator(".ltr").first().evaluate((element) => getComputedStyle(element).direction);
           check(`chromium: LTR islands are isolated`, ltrDirection === "ltr", ltrDirection);
 
@@ -138,7 +144,7 @@ try {
 
           const axeResults = await new AxeBuilder({ page }).analyze();
           const severe = axeResults.violations.filter((violation) => ["serious", "critical"].includes(violation.impact));
-          const citationStyle = await page.locator('a[role="doc-biblioref"]').first().evaluate((element) => {
+          const citationStyle = await page.locator('a.citation').first().evaluate((element) => {
             const style = getComputedStyle(element);
             return `${style.color}; ${style.textDecorationLine}; ${style.textDecorationStyle}; ${style.fontWeight}`;
           });
@@ -185,7 +191,7 @@ try {
       await page.screenshot({ path: join(screenshotRoot, `chromium-${viewport.name}-top.png`), animations: "disabled" });
       if (["mobile-390", "desktop-1440"].includes(viewport.name)) {
         await page.locator(".cvt-lab").screenshot({ path: join(screenshotRoot, `chromium-${viewport.name}-cvt-lab.png`), animations: "disabled" });
-        await page.locator("#fig-differential-kinematics").screenshot({ path: join(screenshotRoot, `chromium-${viewport.name}-differential.png`), animations: "disabled" });
+        await page.locator("#fig-differential-components").screenshot({ path: join(screenshotRoot, `chromium-${viewport.name}-differential.png`), animations: "disabled" });
       }
       await context.close();
     }
@@ -301,7 +307,7 @@ try {
       await page.goto(`${baseURL}/content/m08.html`, { waitUntil: "load" });
       const text = await page.locator("main").innerText();
       check("JavaScript-off: core module remains readable", text.includes("دیفرانسیل باز") && text.includes("استنتاج نسبت صحیح") && text.length > 12000, `${text.length} characters`);
-      check("JavaScript-off: static CVT figure remains", await page.locator("#fig-cvt-effective-radius").count() === 1);
+      check("JavaScript-off: static CVT relationship table remains", await page.locator(".ratio-table").count() === 1);
       await context.close();
     } finally {
       await noJsBrowser.close();
@@ -312,6 +318,17 @@ try {
 
     const htmlFiles = ["index.html", "content/m08.html", "content/m08-answers.html", "content/glossary.html", "content/references.html"];
     check("all five book pages rendered", htmlFiles.every((file) => existsSync(join(webRoot, file))));
+
+    const moduleHtml = readFileSync(join(webRoot, "content", "m08.html"), "utf8");
+    const referencesHtml = readFileSync(join(webRoot, "content", "references.html"), "utf8");
+    const citationTargets = [...moduleHtml.matchAll(/href="\.\.\/content\/references\.html#(source-[^"]+)"/g)].map((match) => match[1]);
+    check(
+      "all seven numeric citation links resolve to bibliography destinations",
+      citationTargets.length === 7 && citationTargets.every((target) => referencesHtml.includes(`id="${target}"`)),
+      `${citationTargets.length} links`,
+    );
+    const referenceVisibleText = referencesHtml.replace(/<script[^]*?<\/script>/g, " ").replace(/<style[^]*?<\/style>/g, " ").replace(/<[^>]+>/g, " ");
+    check("web bibliography uses short labels instead of visible raw URLs", !/https?:\/\//i.test(referenceVisibleText));
   }
 } finally {
   await new Promise((resolveClose) => server.close(resolveClose));

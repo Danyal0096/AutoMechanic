@@ -1,0 +1,28 @@
+schema_version: 1
+module: M08
+visibility: internal
+questions:
+  - id: q-m08-01
+    learning_objectives: [LO-M08-01, LO-M08-02, LO-M08-03]
+    concepts: [S12-C03, S12-C05]
+    suggested_marks: 20
+  - id: q-m08-02
+    learning_objectives: [LO-M08-03]
+    concepts: [S12-C06, S12-C07]
+    suggested_marks: 15
+  - id: q-m08-03
+    learning_objectives: [LO-M08-05]
+    concepts: [S13-C07, S13-C08]
+    suggested_marks: 15
+  - id: q-m08-04
+    learning_objectives: [LO-M08-02, LO-M08-07]
+    concepts: [S15-C02, S15-C03, S15-C04]
+    suggested_marks: 20
+  - id: q-m08-05
+    learning_objectives: [LO-M08-08]
+    concepts: [S13-C03, S13-C10]
+    suggested_marks: 15
+  - id: q-m08-06
+    learning_objectives: [LO-M08-06]
+    concepts: [S13-C10, S14-C05, S15-C07]
+    suggested_marks: 15

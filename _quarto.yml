@@ -13,15 +13,11 @@ project:
 lang: fa
 dir: rtl
 language: _language-fa.yml
-bibliography: references/references.bib
-link-citations: true
 filters:
   - filters/rtl.lua
 
 book:
-  title: "مکانیک خودرو عمومی"
-  subtitle: "برگرفته از آموزه‌های استاد نصیری — نمونهٔ کامل ماژول ۰۸"
-  author: "نسخهٔ آموزشی دانشگاهی"
+  title: "مکانیک خودرو عمومی — برگرفته از آموزه‌های استاد نصیری"
   output-file: auto-mechanic-fa
   page-navigation: true
   search:

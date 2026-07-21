@@ -6,6 +6,8 @@
 /playwright-report/
 /test-results/
 /index.html
+/index.pdf
+/index.tex
 /content/*.html
 /index_files/
 /site_libs/

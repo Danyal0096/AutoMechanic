@@ -92,16 +92,6 @@ bdi {
     linear-gradient(145deg, #f8fbfb, #e9f3f2);
 }
 
-.module-hero::before {
-  content: "M08";
-  position: absolute;
-  inset-inline-end: 1rem;
-  inset-block-start: -1.25rem;
-  color: rgb(23 75 99 / 8%);
-  font: 700 clamp(4rem, 13vw, 8rem) / 1 "DejaVu Sans", sans-serif;
-  direction: ltr;
-}
-
 .module-hero > * {
   position: relative;
 }
@@ -126,23 +116,33 @@ bdi {
   background: #fff8ed;
 }
 
-.objective-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
+.system-flow {
+  margin-block: 1.25rem;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid var(--am-line);
+  border-inline-start: 0.32rem solid var(--am-teal);
+  border-radius: 0.65rem;
+  background: #f7fafb;
+}
+
+.system-flow p {
+  margin-block: 0.35rem;
+}
+
+.objective-list {
   margin-block: 1rem 1.8rem;
 }
 
-.objective-grid > div {
-  min-width: 0;
-  padding: 0.9rem 1rem;
-  border: 1px solid var(--am-line);
-  border-radius: 0.7rem;
-  background: var(--am-white);
+.objective-list ol {
+  columns: 2;
+  column-gap: 2.2rem;
+  padding-inline-start: 1.5rem;
 }
 
-.objective-grid strong {
-  color: var(--am-blue);
+.objective-list li {
+  break-inside: avoid;
+  margin-block-end: 0.55rem;
+  padding-inline-start: 0.25rem;
 }
 
 .figure {
@@ -230,10 +230,24 @@ main dd a {
   text-underline-offset: 0.16em;
 }
 
-.citation a[role="doc-biblioref"] {
-  text-decoration: underline;
-  text-decoration-thickness: 0.08em;
-  text-underline-offset: 0.16em;
+a.citation {
+  text-decoration: none;
+}
+
+.citation {
+  font-size: 0.78em;
+  vertical-align: super;
+  white-space: nowrap;
+}
+
+.reference-entry {
+  padding-block: 0.55rem;
+  border-block-end: 1px solid var(--am-line);
+  text-align: start;
+}
+
+.reference-entry:last-child {
+  border-block-end: 0;
 }
 
 main p:has(> math[display="block"]) {
@@ -268,6 +282,35 @@ main math[display="inline"] {
   direction: rtl;
 }
 
+.ratio-table table {
+  min-width: 560px;
+}
+
+.selector-list,
+.operating-sequence,
+.state-list {
+  margin-block: 1rem 1.4rem;
+}
+
+.selector-list p {
+  margin-block: 0.45rem;
+  padding: 0.65rem 0.8rem;
+  border-inline-start: 0.22rem solid var(--am-line);
+  background: #fafcfc;
+}
+
+.selector-code {
+  display: inline-block;
+  min-width: 1.8em;
+  color: var(--am-blue);
+  text-align: center;
+}
+
+.operating-sequence li,
+.state-list li {
+  margin-block-end: 0.5rem;
+}
+
 .callout {
   border-radius: 0.65rem;
 }
@@ -296,13 +339,6 @@ main math[display="inline"] {
   margin: 0;
 }
 
-.cvt-lab__canvas {
-  display: block;
-  width: min(100%, 760px);
-  height: auto;
-  margin-inline: auto;
-}
-
 .cvt-lab__control {
   display: grid;
   grid-template-columns: minmax(9rem, 1fr) minmax(12rem, 2fr);
@@ -316,13 +352,22 @@ main math[display="inline"] {
   accent-color: var(--am-teal);
 }
 
+.cvt-lab__radii,
 .cvt-lab__readout {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.55rem;
   margin-block-start: 0.85rem;
 }
 
+.cvt-lab__radii {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cvt-lab__readout {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cvt-lab__radii > div,
 .cvt-lab__readout > div {
   padding: 0.65rem 0.75rem;
   border-radius: 0.55rem;
@@ -330,6 +375,7 @@ main math[display="inline"] {
   text-align: center;
 }
 
+.cvt-lab__radii strong,
 .cvt-lab__readout strong {
   display: block;
   color: var(--am-blue);
@@ -343,8 +389,21 @@ details > summary {
   font-weight: 700;
 }
 
-.glossary-term {
+.glossary-compact {
+  columns: 2 18rem;
+  column-gap: 2rem;
+}
+
+.glossary-entry {
   break-inside: avoid;
+  margin-block: 0 0.45rem;
+  padding-block: 0.35rem 0.55rem;
+  border-block-end: 1px solid #e2e9eb;
+}
+
+.glossary-entry p {
+  margin: 0;
+  line-height: 1.75;
 }
 
 .source-note {
@@ -362,7 +421,11 @@ details > summary {
 }
 
 @media (max-width: 700px) {
-  .objective-grid,
+  .objective-list ol {
+    columns: 1;
+  }
+
+  .cvt-lab__radii,
   .cvt-lab__readout {
     grid-template-columns: 1fr;
   }

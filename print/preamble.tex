@@ -6,6 +6,7 @@
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 \usepackage{needspace}
+\usepackage{multicol}
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{float}
@@ -40,18 +41,18 @@
 \setmonofont{DejaVu Sans Mono}
 \DefaultMathDigits
 
-\AtBeginDocument{\hypersetup{
+\AtBeginDocument{\setRTL\hypersetup{
   unicode=true,
   pdflang={fa-IR},
   pdfauthor={برگرفته از آموزه‌های استاد نصیری},
-  pdftitle={مکانیک خودرو عمومی — نمونهٔ ماژول ۰۸},
+  pdftitle={مکانیک خودرو عمومی — برگرفته از آموزه‌های استاد نصیری},
   pdfsubject={گرداننده نهایی، دیفرانسیل و معماری‌های گیربکس خودکار}
 }}
 
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[R]{\small\color{AutoMechanicBlue} مکانیک خودرو عمومی}
-\fancyhead[L]{\small\color{AutoMechanicInk} نمونهٔ ماژول ۰۸}
+\fancyhead[L]{\small\color{AutoMechanicInk} انتقال قدرت}
 \fancyfoot[C]{\small\thepage}
 \renewcommand{\headrulewidth}{0.35pt}
 \renewcommand{\footrulewidth}{0pt}
@@ -59,7 +60,8 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.48em}
 \setlength{\emergencystretch}{2.5em}
-\renewcommand{\arraystretch}{1.28}
+\renewcommand{\arraystretch}{1.18}
+\setlength{\tabcolsep}{4.5pt}
 \setcounter{secnumdepth}{-\maxdimen}
 \setcounter{tocdepth}{2}
 \renewcommand{\theequation}{\arabic{equation}}
@@ -74,4 +76,16 @@
 \renewcommand{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi
   \thispagestyle{plain}\global\@topnum\z@
   \@afterindentfalse\secdef\@chapter\@schapter}
+\def\@makechapterhead#1{%
+  \vspace*{10pt}%
+  {\parindent\z@\raggedleft\normalfont
+    \interlinepenalty\@M
+    \Huge\bfseries\color{AutoMechanicBlue}#1\par\nobreak
+    \vskip 26pt}}
+\def\@makeschapterhead#1{%
+  \vspace*{10pt}%
+  {\parindent\z@\raggedleft\normalfont
+    \interlinepenalty\@M
+    \Huge\bfseries\color{AutoMechanicBlue}#1\par\nobreak
+    \vskip 26pt}}
 \makeatother

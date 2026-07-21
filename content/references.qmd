@@ -1,8 +1,63 @@
 # منابع {.unnumbered}
 
-منابع زیر برای حفظ دامنهٔ آموزشی مقاله‌های پایه و راستی‌آزمایی اصلاحات فنی M08
-به کار رفته‌اند. متن ماژول بازنویسی تحولی است و هیچ تصویر مقالهٔ مبدأ در آن
-بازنشر نشده است.
+منابع زیر برای پیگیری مبانی درسی و راستی‌آزمایی توضیح‌های فنی این فصل به کار
+رفته‌اند. نشانگرهای شماره‌دار متن به مدخل هم‌شماره در این فهرست پیوند دارند.
 
-::: {#refs}
+::: {#source-ameg-s12 .reference-entry}
+**۱.** [AMEG]{.ltr}، «دیفرانسیل خودرو و پلوس». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ
+۲۰۲۶. [صفحهٔ منبع](https://ameg.ir/دیفرانسیل-خودرو/)
+:::
+
+::: {#source-ameg-s13 .reference-entry}
+**۲.** [AMEG]{.ltr}، «گیربکس اتوماتیک». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶.
+[صفحهٔ منبع](https://ameg.ir/گیربکس-اتوماتیک/)
+:::
+
+::: {#source-ameg-s14 .reference-entry}
+**۳.** [AMEG]{.ltr}، «گیربکس دو کلاچه». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶.
+[صفحهٔ منبع](https://ameg.ir/گیربکس-دوکلاچه/)
+:::
+
+::: {#source-ameg-s15 .reference-entry}
+**۴.** [AMEG]{.ltr}، «گیربکس پیوسته‌متغیر». منبع وب؛ مشاهده در ۲۱ ژوئیهٔ
+۲۰۲۶. [صفحهٔ منبع](https://ameg.ir/گیربکس-پیوسته-متغیر/)
+:::
+
+::: {#source-eaton-open-diff .reference-entry}
+**۵.** [Eaton]{.ltr}، [Open Differential]{.ltr}. منبع فنی رسمی؛ مشاهده در
+۲۱ ژوئیهٔ ۲۰۲۶. [صفحهٔ رسمی](https://www.eaton.com/us/en-us/products/differentials-traction-control/open-differential.html)
+:::
+
+::: {#source-eaton-lsd .reference-entry}
+**۶.** [Eaton]{.ltr}، [Limited-Slip Differentials]{.ltr}. منبع فنی رسمی؛
+مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶. [صفحهٔ رسمی](https://www.eaton.com/br/en-us/products/differentials-traction-control/limited-slip-differentials.html)
+:::
+
+::: {#source-middelmann1999 .reference-entry}
+**۷.** [Middelmann, V.; Wagner, U.]{.ltr} [The Torque Converter as a
+System]{.ltr}. مجموعه‌مقالات [LuK/Schaeffler]{.ltr}؛ مشاهده در ۲۱ ژوئیهٔ
+۲۰۲۶. [نسخهٔ رسمی PDF](https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/symposia_1/downloads_11/6_Torque_Converter.pdf)
+:::
+
+::: {#source-zf2019 .reference-entry}
+**۸.** [ZF Friedrichshafen AG]{.ltr}، [ZF Automatic Transmission with
+Optimized Torque Converter]{.ltr}، ۲۰۱۹. [نسخهٔ رسمی PDF](https://press.zf.com/press/media/en/press_media/2019_3/pdf/releases_5/global_2/tx2019_01_08_pi_zfa_torque_converter_eng.pdf)
+:::
+
+::: {#source-li2012 .reference-entry}
+**۹.** [Li, C.-T.; Zhang, X.; Peng, H.]{.ltr} [Design of Power-Split Hybrid
+Vehicles with a Single Planetary Gear]{.ltr}. [ASME]{.ltr}، ۲۰۱۲.
+[نسخهٔ مقاله](https://huei.engin.umich.edu/wp-content/uploads/sites/186/2015/02/DSCC-2012-Zhang.pdf)
+:::
+
+::: {#source-kimmig2006 .reference-entry}
+**۱۰.** [Kimmig, K.-L.; Agner, I.]{.ltr} [Double Clutch — Wet or Dry, That
+Is the Question]{.ltr}. هشتمین سمپوزیوم [LuK/Schaeffler]{.ltr}، ۲۰۰۶.
+[نسخهٔ رسمی PDF](https://www.schaeffler.com/remotemedien/media/_shared_media/08_media_library/01_publications/schaeffler_2/symposia_1/downloads_11/09_Double_clutch.pdf)
+:::
+
+::: {#source-bosch-pushbelt .reference-entry}
+**۱۱.** [Bosch Mobility]{.ltr}، [Pushbelt for Continuously Variable
+Transmission]{.ltr}. منبع فنی رسمی؛ مشاهده در ۲۱ ژوئیهٔ ۲۰۲۶.
+[صفحهٔ رسمی](https://www.bosch-mobility.com/en/solutions/transmission-technology/pushbelt/)
 :::

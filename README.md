@@ -9,8 +9,8 @@
 | Phase 1 — Source Audit | کامل؛ ۲۰/۲۰ منبع و ۱۹۶ مفهوم ممیزی/نگاشت شده‌اند |
 | Phase 2 — Architecture Proposal | کامل، کامیت‌شده و مصوب |
 | Approval Gate 1 | **تصویب‌شده در ۲۰۲۶-۰۷-۲۱** |
-| Phase 3 — Representative Sample | **کامل و خودممیزی‌شده؛ در انتظار Approval Gate 2** |
-| Approval Gate 2 | آمادهٔ تصمیم؛ هنوز تصویب نشده است |
+| Phase 3 — Representative Sample | **corrective pass کامل؛ baseline نخست رد شده؛ در انتظار Approval Gate 2** |
+| Approval Gate 2 | corrective sample آمادهٔ بازبینی؛ هنوز تصویب نشده است |
 | Phase 4 — Full Production | آغاز نشده؛ تا Approval Gate 2 ممنوع |
 
 شاخهٔ این مرحله: `workgpt/sample-module`.
@@ -23,7 +23,7 @@
 - [`RESEARCH_LOG.md`](RESEARCH_LOG.md) — شواهد فنی و انتشار از منابع معتبر؛
 - [`ARCHITECTURE_PROPOSAL.md`](ARCHITECTURE_PROPOSAL.md) — معماری ده‌ماژولی، اهداف، stack، وب/PDF، حجم، مراحل و ریسک؛
 - [`PROJECT_SPEC.md`](PROJECT_SPEC.md) — خط مبنای دامنه، زبان، RTL، رسانه، gate و حدود اختیار؛
-- [`MEDIA_SOURCES.md`](MEDIA_SOURCES.md) — سیاست حقوق/رسانه، ۳۴ نیاز و شش SVG اصیل و تأییدشدهٔ M08؛
+- [`MEDIA_SOURCES.md`](MEDIA_SOURCES.md) — سیاست حقوق/رسانه، بررسی شش شکل ردشده و manifest سه رسانهٔ مجاز M08؛
 - [`TEST_PLAN.md`](TEST_PLAN.md) — آزمون پوشش، علم، فارسی، bidi، وب، PDF و بازتولیدپذیری؛
 - [`PHASE3_AUDIT.md`](PHASE3_AUDIT.md) — شاهد build، خودممیزی M08 و تصمیم‌های لازم در Gate 2؛
 - [`CHANGELOG.md`](CHANGELOG.md) — نقاط عطف و تغییرات معنی‌دار.
@@ -55,7 +55,7 @@ git diff --check
 - HTML ایستا + CSS logical/RTL + JavaScript کمینه؛
 - XeLaTeX در TeX Live 2023 + XePersian 24.8 برای PDF رسمی؛
 - Vazirmatn 33.0.3 به‌صورت محلی برای وب و PDF و MathML بومی مرورگر برای معادلات وب؛
-- BibTeX/CSL برای ارجاع؛ YAML برای اصطلاح‌نامه/رسانه؛
+- BibTeX برای رکوردهای ممیزی و نشانگرهای عددی QMD برای ارجاع خوانای مشترک؛ YAML برای اصطلاح‌نامه/رسانه/سنجش داخلی؛
 - Node.js ≥20 با lockfile؛ Playwright 1.61.1، Chromium 149 و Firefox ESR 140.12 برای مرورگر؛
 - qpdf/Poppler برای preflight و رندر PDF.
 
@@ -107,8 +107,8 @@ npm test
 ├── _quarto.yml
 ├── index.qmd
 ├── content/{m08,m08-answers,glossary,references}.qmd
-├── assets/{css,js,diagrams,fonts}/
-├── data/{m08-coverage,glossary}.yml
+├── assets/{css,js,fonts,media}/
+├── data/{m08-coverage,m08-assessment,glossary}.yml
 ├── references/references.bib
 ├── print/preamble.tex
 ├── filters/rtl.lua
@@ -121,7 +121,7 @@ npm test
 
 ## رسانه
 
-۱۵۸ تصویر در مقالات شناسایی شده‌اند، اما به‌صورت پیش‌فرض بازنشر نمی‌شوند. سیاست مصوب، استفاده از SVGهای اصیل و غیر‌فریبنده برای نقشه‌های سامانه و روابط، یا رسانهٔ رسمی/دارای مجوز روشن با ثبت کامل منبع است. متن مقاله‌ها مبنای برنامهٔ درسی برای بازنویسی تحول‌آفرین است و عبارت‌های طولانی آن‌ها عیناً بازتولید نمی‌شود.
+۱۵۸ تصویر در مقالات شناسایی شده‌اند، اما به‌صورت پیش‌فرض بازنشر نمی‌شوند. تصویر مکانیکی AI و هندسهٔ قطعهٔ برنامه‌ساخته مجاز نیست. اولویت با رسانهٔ فنی دقیق موجود و دارای مجوز روشن و ثبت کامل است؛ در نبود آن، متن، معادله، جدول، توالی یا جریان واقعاً انتزاعی استفاده می‌شود. متن مقاله‌ها مبنای برنامهٔ درسی برای بازنویسی تحول‌آفرین است و عبارت‌های طولانی آن‌ها عیناً بازتولید نمی‌شود.
 
 ## انتشار و تحویل مرحله‌ای
 
@@ -131,14 +131,21 @@ npm test
 
 ## آزمون
 
-آزمون L1 نمونه در کنار شواهد Gate 1 اجرا شده است. نتیجهٔ نهایی:
+آزمون L1 corrective sample در کنار شواهد Gate 1 اجرا شده است. baseline نخست
+۲۵صفحه‌ای با وجود pass خودکار در human review رد شد و ادعای قبولی دیداری آن در
+`PHASE3_AUDIT.md` پس گرفته شده است. نتیجهٔ artifact اصلاحی:
 
-- ۲۸/۲۸ کنترل محتوا، پوشش، محاسبه، اصطلاح و رسانه؛
-- ۷۱/۷۱ کنترل وب در Chromium و Firefox، پنج profile، keyboard، JavaScript-off، print و axe؛
-- ۲۵/۲۵ کنترل PDF؛ ۲۵ صفحهٔ A4، مقصدهای داخلی TOC/بخش/پاورقی، ۳۰ رکورد فونت embedded/subset، صفر صفحهٔ سفید، missing glyph و overfull box؛
-- بازبینی دیداری همهٔ ۲۵ صفحهٔ PDF و screenshotهای کلیدی وب؛
+- ۳۴/۳۴ کنترل محتوا، پوشش، محاسبه، اصطلاح، citation و رسانه؛
+- ۷۶/۷۶ کنترل خودکار وب در Chromium و Firefox، پنج profile، keyboard، JavaScript-off، print، لینک منابع و axe؛
+- ۲۷/۲۷ کنترل PDF؛ ۲۲ صفحهٔ A4، ۱۶۳ مقصد داخلی، ۶ رکورد فونت embedded/subset، صفر صفحهٔ سفید، missing glyph و overfull box؛
+- بازبینی دیداری صفحه‌به‌صفحهٔ هر ۲۲ صفحهٔ PDF اصلاحی؛
+- صفر SVG ردشده، شناسهٔ داخلی، author–date، `n.d.` یا URL خام در PDF دانشجو؛
 - ۲۹/۲۹ مفهوم M08 از S12–S15 با anchor واقعی و وضعیت `Sample verified`.
-- build مستقل از clone تمیز؛ کل وب و PDF با خروجی اصلی byte-for-byte یکسان.
+- build مستقل از clone تمیز؛ وب file-for-file و PDF byte-for-byte یکسان با
+  SHA-256 `98e4e12772c5830aa8f432e96c0559715c73fb98b2c2d0d289994c8ffca4dc66`.
+
+نتیجهٔ وب فقط build و sanity خودکار است. طبق تصمیم کاربر، human audit مستقل وب
+به Codex واگذار شده و این مرحله هیچ ادعای approval انسانی وب ندارد.
 
 جزئیات و معیارهای pass/fail در [`TEST_PLAN.md`](TEST_PLAN.md) و نتیجهٔ امضاشده در [`PHASE3_AUDIT.md`](PHASE3_AUDIT.md) است.
 
