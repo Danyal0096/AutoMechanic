@@ -1,0 +1,106 @@
+# منابع و دفتر رسانه
+
+> وضعیت Gate 1: هیچ رسانه‌ای در محصول ادغام نشده است. انتخاب و دانلود رسانه پیش از تصویب معماری و روشن‌شدن حقوق انجام نمی‌شود.
+
+## وضعیت پایه
+
+- ممیزی، وجود ۱۵۸ تصویر در ۲۰ مقالهٔ مبدأ را ثبت کرده است.
+- دسترسی عمومی به مقاله یا تصویر، مجوز بازنشر نیست.
+- تصاویر مقاله‌ها در این مرحله فقط برای فهم منبع دیده شده‌اند؛ هیچ فایل آن‌ها در مخزن کپی نشده است.
+- media manifest ادغام‌شده در این نسخه **صفر ردیف** دارد؛ بنابراین attribution ناقص پنهانی وجود ندارد.
+
+## ثبت رسانه‌های ادغام‌شده
+
+| Media ID | Module/section | Purpose | Type | Creator/organization | Original URL | License/permission | Local file | Static PDF treatment | Alt/caption status | Checksum | Review status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| — | — | هیچ موردی تا Gate 1 ادغام نشده است | — | — | — | — | — | — | — | — | Not started |
+
+هنگام آغاز Phase 3، ردیف placeholder حذف و هر فایل پیش از استفاده با شناسهٔ پایدار (`MED-M08-001` و مانند آن) ثبت می‌شود. نبود ردیف manifest برای فایل موجود در `assets/images/` باید تست را fail کند.
+
+## فیلدهای اجباری و قواعد پذیرش
+
+هر رسانه باید این اطلاعات را پیش از merge داشته باشد:
+
+1. شناسه، ماژول و section دقیق؛
+2. هدف آموزشی یک‌جمله‌ای؛
+3. نوع: photo، diagram، cutaway، animation، video، sequence یا conceptual overlay؛
+4. خالق/سازمان و URL صفحهٔ اصلی، نه فقط URL فایل؛
+5. مجوز، متن اجازه یا public-domain basis با تاریخ دسترسی؛
+6. نام فایل محلی، hash و derivativeهای web/print؛
+7. متن جایگزین و caption فارسی؛
+8. درمان PDF برای رسانهٔ متحرک؛
+9. بازبینی صحت مکانیکی، دسترس‌پذیری و خوانایی grayscale؛
+10. وضعیت `candidate → rights-cleared → technical-reviewed → integrated → verified`.
+
+«برای استفادهٔ آموزشی رایگان» بدون متن مجوز کافی نیست. hotlink به فایل بحرانی پذیرفته نیست. رسانهٔ دارای watermark حذف/پنهان نمی‌شود.
+
+## سلسله‌مراتب انتخاب
+
+1. شکل/رسانهٔ رسمی سازنده با اجازهٔ روشن؛
+2. منبع دانشگاهی/نهاد مهندسی با مجوز مناسب؛
+3. رسانهٔ Creative Commons سازگار، با attribution و ثبت تغییر؛
+4. عکس اصیل با اجازهٔ مالک؛
+5. نمودار سادهٔ اصیل از روابطی که geometry واقع‌گرایانه نمی‌طلبد.
+
+برای قطعهٔ واقعی، cutaway یا سینماتیک پیچیده، تصویر مولد AI پیش‌فرضاً مردود است. ایجاد پیکان جریان، نمودار حالت، timeline، block diagram و overlay غیرهندسی مجاز است، مشروط به بازبینی فنی.
+
+## بودجه و فهرست نیاز
+
+| Requirement ID | Module | مفهوم/حرکت لازم | قالب وب | درمان PDF | تعداد هدف | ریسک |
+|---|---|---|---|---|---:|---|
+| MR-01 | M01 | نقشهٔ سامانه‌ها و جریان انرژی | SVG responsive | همان SVG/نسخه grayscale | ۱–۲ | Low؛ قابل طراحی اصیل |
+| MR-02 | M01 | خط زمانی فشرده | HTML/SVG | فریم برداری | ۱ | Low |
+| MR-03 | M02 | چرخهٔ چهارزمانه در ۷۲۰° | sequence/animation سبک | ۴ فریم یا نمودار حلقوی | ۱ | High؛ زمان‌بندی باید دقیق باشد |
+| MR-04 | M02 | حجم‌ها/TDC/BDC | SVG مقطع | SVG | ۱–۲ | High؛ هندسه نیازمند بازبینی |
+| MR-05 | M02 | فازبندی چهارسیلندر | SVG/interactive optional | نمودار ثابت | ۱ | Medium؛ bidi اعداد |
+| MR-06 | M02 | وانکل | animation/cutaway معتبر | ۳ فریم کلیدی | ۱ | Critical؛ هندسهٔ پیچیده |
+| MR-07 | M03 | OHV/OHC و مسیر نیرو | diagram/cutaway | دو شکل مقایسه | ۲ | High |
+| MR-08 | M03 | valve timing | نمودار زاویه‌ای | همان نمودار | ۱ | High |
+| MR-09 | M03 | آب‌بندی واشر/رینگ | cutaway معتبر + overlay | مقطع ثابت | ۲ | Critical |
+| MR-10 | M04 | مکانیزم لنگ و مسیر بار | animation/cutaway | فریم + پیکان نیرو | ۱–۲ | Critical |
+| MR-11 | M04 | گوهٔ هیدرودینامیک | conceptual diagram | همان | ۱ | Medium؛ قابل طراحی ساده |
+| MR-12 | M05 | مدار روغن | flow SVG | همان | ۱ | High |
+| MR-13 | M05 | مدار خنک‌کاری/بای‌پس | flow SVG | همان | ۱ | High |
+| MR-14 | M05 | درپوش فشار/خلأ | sequence | دو حالت ثابت | ۱ | Medium |
+| MR-15 | M06 | نقشهٔ sensor–ECU–actuator | system map | همان | ۱ | Low؛ قابل طراحی اصیل |
+| MR-16 | M06 | موقعیت اجزای نمونه | عکس/تصویر معتبر و zoom | grid تصویر | ۶–۱۰ | High؛ حق عکس |
+| MR-17 | M06 | داده/موج CKP-CMP/O2 | plot معتبر/اصیل از داده | plot | ۲–۳ | High؛ داده و واحد |
+| MR-18 | M07 | کلاچ درگیر/آزاد | two-state diagram | دو فریم | ۱ | High |
+| MR-19 | M07 | مسیرهای گیربکس/جهت | state diagram | ۳–۴ شکل فشرده | ۳–۴ | Critical |
+| MR-20 | M07 | گاردان/U-joint | animation معتبر | فریم کلیدی | ۱ | High |
+| MR-21 | M08 | دیفرانسیل مستقیم/پیچ | animation | دو یا سه فریم | ۱ | Critical |
+| MR-22 | M08 | torque converter flow | animation/cutaway | ۲ فریم | ۱ | Critical |
+| MR-23 | M08 | planetary states | interactive/state SVG | جدول+شکل | ۱ | Critical |
+| MR-24 | M08 | DCT preselection | sequence | sequence ثابت | ۱ | High |
+| MR-25 | M08 | CVT effective radii | controlled animation | low/high frames | ۱ | Critical؛ معادله رده D |
+| MR-26 | M09 | مدار هیدرولیک/دو مدار | schematic | همان | ۱ | High |
+| MR-27 | M09 | حلقه ABS | state/flow SVG | همان | ۱ | High |
+| MR-28 | M09 | Ackermann/4WS | geometry diagram | همان | ۲ | High |
+| MR-29 | M09 | HPS/EHPS/EPS | comparison map | جدول+نقشه | ۱–۲ | Medium |
+| MR-30 | M10 | انواع تعلیق | cutaway/photo set | grid مقایسه | ۵–۷ | Critical؛ حق و برچسب |
+| MR-31 | M10 | camber/caster/toe | three-view SVG | همان | ۳ | High |
+| MR-32 | M10 | فنر/دمپر و جریان روغن | animation/cutaway | فریم | ۲ | High |
+| MR-33 | M10 | load path و crumple zone | تصویر سازنده/مهندسی | تصویر ثابت | ۱–۲ | Critical؛ حق تصویر |
+| MR-34 | M10 | passive/active/ADAS map | block diagram | همان | ۱ | Low؛ قابل طراحی اصیل |
+
+بودجهٔ اولیه ۴۵–۶۵ شکل/نمودار substantive است. مجموعه‌های مقایسه‌ای یک figure شماره‌دار می‌توانند چند پنل داشته باشند. عدد برای سهمیه نیست؛ هر رسانه باید نیاز آموزشی مشخص را حل کند.
+
+## خط تولید رسانه
+
+1. **نیاز:** Requirement ID از جدول بالا و معیار فهم تعریف شود.
+2. **جست‌وجو:** سه نامزد معتبر؛ URL و حق ثبت شود.
+3. **انتخاب حقوقی:** only rights-cleared؛ نامزد مردود نیز در research note قابل ثبت است.
+4. **بازبینی فنی:** برچسب، جهت حرکت، نسبت، قطعه و مقیاس بررسی شود.
+5. **پردازش:** crop بدون تغییر معنا، بهینه‌سازی، derivative responsive، حفظ master.
+6. **بومی‌سازی:** caption/alt فارسی؛ اگر برچسب انگلیسی برتر است، راهنمای فارسی کنار شکل و bidi درست.
+7. **PDF fallback:** فریم/توالی/URL آزمایش شود؛ QR جای توضیح اصلی نیست.
+8. **QA:** لینک، checksum، attribution، contrast، grayscale، zoom و print.
+
+## تصمیم باز Gate 1
+
+مالک پروژه باید یکی را تأیید کند:
+
+- **پیشنهاد امن:** تصاویر مبدأ بازنشر نشوند مگر مجوز هر مورد اثبات شود؛ شکل‌های ساده اصیل و رسانه‌های بیرونی دارای مجوز استفاده شوند.
+- **استفاده با اجازه:** اگر اجازهٔ صریح از استاد/AMEG وجود دارد، متن اجازه و حدود آن (بازنویسی، تصویر، وب عمومی، PDF، تغییر/ترجمه) ثبت شود.
+
+تا آن تصمیم، هیچ‌یک از MRها وارد وضعیت `candidate` عملی نمی‌شود و Phase 3 فقط می‌تواند از placeholder غیرواقعی مشخص یا شکل سادهٔ اصیل استفاده کند.
