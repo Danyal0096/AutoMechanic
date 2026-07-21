@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 600" role="img" aria-labelledby="title desc">
+  <title id="title">مدل مفهومی جریان در مبدل گشتاور</title>
+  <desc id="desc">پمپ متصل به موتور، توربین متصل به ورودی گیربکس و استاتور مسیر بازگشت سیال را اصلاح می‌کنند؛ کلاچ قفل‌کن مسیر مکانیکی موازی می‌سازد.</desc>
+  <defs>
+    <marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#174b63"/>
+    </marker>
+    <marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#147d78"/>
+    </marker>
+    <style>
+      .unit{stroke-width:5}
+      .flow{fill:none;stroke:#147d78;stroke-width:7;marker-end:url(#teal)}
+      .lock{fill:none;stroke:#174b63;stroke-width:6;stroke-dasharray:12 7;marker-end:url(#blue)}
+      .shaft{stroke:#1e2933;stroke-width:9}
+      .label{font-family:'DejaVu Sans',sans-serif;font-size:27px;font-weight:700;fill:#1e2933;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .small{font-family:'DejaVu Sans',sans-serif;font-size:20px;fill:#566673;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .latin{font-family:'DejaVu Sans',sans-serif;font-size:18px;fill:#174b63;text-anchor:middle;direction:ltr}
+    </style>
+  </defs>
+  <rect width="1100" height="600" fill="#fff"/>
+  <text x="550" y="42" class="label">مبدل گشتاور: مسیر سیال هنگام آغاز حرکت، مسیر مکانیکی هنگام قفل</text>
+  <line x1="45" y1="275" x2="210" y2="275" class="shaft"/>
+  <line x1="890" y1="275" x2="1055" y2="275" class="shaft"/>
+  <text x="120" y="245" class="small">میل‌لنگ</text>
+  <text x="975" y="245" class="small">ورودی گیربکس</text>
+
+  <circle cx="320" cy="275" r="115" fill="#e9f2f6" stroke="#174b63" class="unit"/>
+  <circle cx="780" cy="275" r="115" fill="#e9f7f4" stroke="#147d78" class="unit"/>
+  <circle cx="550" cy="390" r="78" fill="#fff4e5" stroke="#b56b17" class="unit"/>
+  <text x="320" y="270" class="label">پمپ</text>
+  <text x="320" y="302" class="latin">Impeller</text>
+  <text x="780" y="270" class="label">توربین</text>
+  <text x="780" y="302" class="latin">Turbine</text>
+  <text x="550" y="385" class="label">استاتور</text>
+  <text x="550" y="416" class="latin">Stator</text>
+
+  <path d="M405 198 C515 105 665 105 695 198" class="flow"/>
+  <path d="M708 354 C666 420 637 431 627 425" class="flow"/>
+  <path d="M475 425 C415 390 390 355 389 338" class="flow"/>
+  <text x="550" y="125" class="small">سیال از پمپ انرژی می‌گیرد و به توربین می‌دهد</text>
+  <text x="550" y="505" class="small">استاتور جهت بازگشت را اصلاح می‌کند؛ اثر تکثیر گشتاور به اختلاف دور وابسته است</text>
+
+  <path d="M215 92 H885" class="lock"/>
+  <text x="550" y="83" class="small">کلاچ قفل‌کن: اتصال مکانیکی کنترل‌شده برای کاهش اتلاف لغزش</text>
+  <text x="550" y="570" class="small">نمودار مفهومی است؛ هندسه، تعداد پره‌ها و مسیر سه‌بعدی واقعی را بازنمایی نمی‌کند.</text>
+</svg>

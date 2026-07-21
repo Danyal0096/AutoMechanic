@@ -1,0 +1,83 @@
+schema_version: 1
+module: M08
+terms:
+  - id: final-drive
+    fa: گردانندهٔ نهایی
+    en: final drive
+    definition: آخرین مرحلهٔ کاهش دور پیش از دیفرانسیل یا چرخ‌ها.
+  - id: hypoid-gear
+    fa: چرخ‌دندهٔ هیپوئید
+    en: hypoid gear
+    definition: جفت چرخ‌دنده‌ای با محورهای نامتقاطع و لغزش نسبی قابل‌توجه.
+  - id: open-differential
+    fa: دیفرانسیل باز
+    en: open differential
+    definition: سازوکاری که امکان اختلاف دور دو خروجی را با رفتار گشتاوری محدود فراهم می‌کند.
+  - id: half-shaft
+    fa: نیم‌محور یا پلوس
+    en: half shaft / axle shaft
+    definition: محور انتقال گشتاور از دیفرانسیل تا توپی چرخ.
+  - id: cv-joint
+    fa: مفصل سرعت ثابت
+    en: constant-velocity joint
+    definition: مفصلی که در زاویهٔ کاری، سرعت لحظه‌ای یکنواخت‌تری میان دو محور می‌دهد.
+  - id: transaxle
+    fa: ترنس‌اکسل
+    en: transaxle
+    definition: مجموعهٔ یکپارچهٔ گیربکس، گردانندهٔ نهایی و دیفرانسیل.
+  - id: torque-converter
+    fa: مبدل گشتاور
+    en: torque converter
+    definition: کوپلینگ هیدرودینامیکی دارای پمپ، توربین و استاتور.
+  - id: lockup-clutch
+    fa: کلاچ قفل‌کن
+    en: lock-up clutch
+    definition: مسیر اصطکاکی کنترل‌شده برای کم‌کردن لغزش مبدل.
+  - id: planetary-gearset
+    fa: مجموعهٔ سیاره‌ای
+    en: planetary gearset
+    definition: مجموعهٔ هم‌محور خورشیدی، رینگی و حامل سیاره‌ها.
+  - id: friction-element
+    fa: عنصر اصطکاکی
+    en: friction element
+    definition: کلاچ یا ترمزی که یک مسیر توان یا قید حرکتی را برقرار می‌کند.
+  - id: tcu
+    fa: واحد کنترل گیربکس
+    en: transmission control unit (TCU)
+    definition: کنترل‌کننده‌ای که ورودی‌ها را به فرمان فشار و درگیری تبدیل می‌کند.
+  - id: solenoid
+    fa: شیر برقی
+    en: solenoid valve
+    definition: عملگر الکترومغناطیسی برای تنظیم مسیر یا فشار هیدرولیک.
+  - id: dct
+    fa: گیربکس دوکلاچه
+    en: dual-clutch transmission (DCT)
+    definition: گیربکس دارای دو زیرگیربکس و دو کلاچ برای مسیرهای متناوب دنده.
+  - id: preselection
+    fa: پیش‌انتخاب
+    en: preselection
+    definition: آماده‌کردن دندهٔ بعدی در زیرگیربکس بی‌بار پیش از تحویل گشتاور.
+  - id: cvt
+    fa: گیربکس پیوسته‌متغیر
+    en: continuously variable transmission (CVT)
+    definition: معماری تغییر نسبت پیوسته در یک بازهٔ محدود.
+  - id: variator
+    fa: واریاتور
+    en: variator
+    definition: واحد دو پولی و عضو انعطاف‌پذیر که نسبت CVT را ایجاد می‌کند.
+  - id: effective-radius
+    fa: شعاع مؤثر
+    en: effective running radius
+    definition: فاصلهٔ محور پولی تا مسیر انتقال سرعت مماسی عضو انعطاف‌پذیر.
+  - id: clamping-force
+    fa: نیروی گیره‌ای
+    en: clamping force
+    definition: نیروی محوری پولی برای ایجاد ظرفیت انتقال نیرو بدون لغزش زیان‌آور.
+  - id: reduction-ratio
+    fa: نسبت کاهش دور
+    en: reduction ratio
+    definition: نسبت سرعت ورودی به خروجی با قرارداد i = n_in / n_out.
+  - id: ratio-spread
+    fa: گسترهٔ نسبت
+    en: ratio spread
+    definition: نسبت بزرگ‌ترین نسبت کاهش قابل دسترس به کوچک‌ترین آن.

@@ -1,0 +1,20 @@
+/*-- scss:defaults --*/
+$primary: #174b63;
+$secondary: #147d78;
+$body-color: #1e2933;
+$body-bg: #fbfcfc;
+$link-color: #126b73;
+$font-family-sans-serif: "Vazirmatn", "DejaVu Sans", sans-serif;
+$headings-font-family: "Vazirmatn", "DejaVu Sans", sans-serif;
+$headings-font-weight: 700;
+$line-height-base: 1.9;
+$border-radius: 0.65rem;
+$table-cell-padding-y: 0.65rem;
+$table-cell-padding-x: 0.8rem;
+
+/*-- scss:rules --*/
+.navbar,
+.sidebar,
+.quarto-title-banner {
+  --bs-link-color: #174b63;
+}

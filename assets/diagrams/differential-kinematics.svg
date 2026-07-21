@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 570" role="img" aria-labelledby="title desc">
+  <title id="title">قید سینماتیکی دیفرانسیل باز در مسیر مستقیم و پیچ</title>
+  <desc id="desc">دو پنل نشان می‌دهد سرعت پوسته دیفرانسیل میانگین سرعت چرخ چپ و راست است؛ در حرکت مستقیم سرعت‌ها برابر و در پیچ یکی کمتر و دیگری بیشتر می‌شود.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#174b63"/>
+    </marker>
+    <style>
+      .panel{fill:#fbfcfc;stroke:#cbd8dc;stroke-width:2;rx:18}
+      .case{fill:#eaf2f3;stroke:#174b63;stroke-width:4}
+      .gear{fill:#fff;stroke:#147d78;stroke-width:5}
+      .shaft{stroke:#1e2933;stroke-width:8}
+      .wheel{fill:#1e2933;stroke:#1e2933;stroke-width:2}
+      .spin{fill:none;stroke:#174b63;stroke-width:4;marker-end:url(#arrow)}
+      .label{font-family:'DejaVu Sans',sans-serif;font-size:25px;font-weight:700;fill:#1e2933;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .small{font-family:'DejaVu Sans',sans-serif;font-size:20px;fill:#566673;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .math{font-family:'DejaVu Sans',sans-serif;font-size:24px;fill:#174b63;text-anchor:middle;direction:ltr}
+    </style>
+  </defs>
+  <rect width="1100" height="570" fill="#fff"/>
+  <text x="550" y="38" class="label">دیفرانسیل سرعت را «از یک چرخ نمی‌دزدد»؛ یک قید هندسی را برقرار می‌کند</text>
+
+  <rect x="35" y="70" width="495" height="390" class="panel"/>
+  <text x="282" y="110" class="label">حرکت مستقیم</text>
+  <circle cx="282" cy="245" r="92" class="case"/>
+  <circle cx="242" cy="245" r="34" class="gear"/>
+  <circle cx="322" cy="245" r="34" class="gear"/>
+  <line x1="45" y1="245" x2="208" y2="245" class="shaft"/>
+  <line x1="356" y1="245" x2="519" y2="245" class="shaft"/>
+  <rect x="45" y="180" width="28" height="130" rx="9" class="wheel"/>
+  <rect x="491" y="180" width="28" height="130" rx="9" class="wheel"/>
+  <path d="M225 157 A92 92 0 0 1 347 170" class="spin"/>
+  <text x="282" y="370" class="math">nL = nR = nc = 500 rpm</text>
+  <text x="282" y="414" class="small">هرزگردها با پوسته حمل می‌شوند و حول محور خود نمی‌چرخند</text>
+
+  <rect x="570" y="70" width="495" height="390" class="panel"/>
+  <text x="817" y="110" class="label">پیچ به چپ</text>
+  <circle cx="817" cy="245" r="92" class="case"/>
+  <circle cx="777" cy="245" r="34" class="gear"/>
+  <circle cx="857" cy="245" r="34" class="gear"/>
+  <line x1="580" y1="245" x2="743" y2="245" class="shaft"/>
+  <line x1="891" y1="245" x2="1054" y2="245" class="shaft"/>
+  <rect x="580" y="180" width="28" height="130" rx="9" class="wheel"/>
+  <rect x="1026" y="180" width="28" height="130" rx="9" class="wheel"/>
+  <path d="M760 157 A92 92 0 0 1 882 170" class="spin"/>
+  <path d="M785 214 A34 34 0 0 1 804 255" class="spin"/>
+  <text x="817" y="370" class="math">nL = 420, nc = 500, nR = 580 rpm</text>
+  <text x="817" y="414" class="small">کاهش یک سمت دقیقاً با افزایش سمت دیگر جبران می‌شود</text>
+
+  <rect x="165" y="485" width="770" height="62" rx="14" fill="#eff6f5" stroke="#147d78" stroke-width="2"/>
+  <text x="550" y="525" class="math">nc = (nL + nR) / 2   ⇔   nL + nR = 2nc</text>
+</svg>

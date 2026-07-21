@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 590" role="img" aria-labelledby="title desc">
+  <title id="title">توالی پیش انتخاب و انتقال گشتاور در گیربکس دوکلاچه</title>
+  <desc id="desc">دنده های فرد و زوج روی دو زیرگیربکس جدا هستند؛ هنگام حرکت با دنده یک، دنده دو پیش انتخاب می‌شود و سپس گشتاور با همپوشانی کنترل شده کلاچ‌ها جابه‌جا می‌شود.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#174b63"/>
+    </marker>
+    <style>
+      .panel{fill:#fbfcfc;stroke:#cbd8dc;stroke-width:2;rx:18}
+      .shaft{stroke:#1e2933;stroke-width:8}
+      .active{fill:#174b63;stroke:#174b63;stroke-width:3}
+      .ready{fill:#fff;stroke:#147d78;stroke-width:5;stroke-dasharray:7 4}
+      .idle{fill:#fff;stroke:#9aaab2;stroke-width:3}
+      .label{font-family:'DejaVu Sans',sans-serif;font-size:25px;font-weight:700;fill:#1e2933;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .small{font-family:'DejaVu Sans',sans-serif;font-size:18px;fill:#566673;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .latin{font-family:'DejaVu Sans',sans-serif;font-size:20px;fill:#174b63;text-anchor:middle;direction:ltr}
+      .step{fill:none;stroke:#174b63;stroke-width:4;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1100" height="590" fill="#fff"/>
+  <text x="550" y="40" class="label">پیش‌انتخاب، زمان مکانیکی انتخاب دنده را کم می‌کند؛ تعویض هنوز مدیریت اصطکاک می‌خواهد</text>
+
+  <rect x="35" y="78" width="320" height="395" class="panel"/>
+  <text x="195" y="116" class="label">۱. حرکت با دندهٔ ۱</text>
+  <line x1="105" y1="180" x2="285" y2="180" class="shaft"/>
+  <line x1="105" y1="335" x2="285" y2="335" class="shaft"/>
+  <circle cx="115" cy="180" r="30" class="active"/><text x="115" y="188" fill="#fff" class="latin">K1</text>
+  <circle cx="115" cy="335" r="30" class="idle"/><text x="115" y="343" class="latin">K2</text>
+  <circle cx="215" cy="180" r="43" class="active"/><text x="215" y="188" fill="#fff" class="latin">1</text>
+  <circle cx="215" cy="335" r="38" class="idle"/><text x="215" y="343" class="latin">2</text>
+  <text x="195" y="415" class="small">مسیر فرد گشتاور می‌دهد</text>
+  <text x="195" y="446" class="small">مسیر زوج هنوز آزاد است</text>
+
+  <rect x="390" y="78" width="320" height="395" class="panel"/>
+  <text x="550" y="116" class="label">۲. پیش‌انتخاب دندهٔ ۲</text>
+  <line x1="460" y1="180" x2="640" y2="180" class="shaft"/>
+  <line x1="460" y1="335" x2="640" y2="335" class="shaft"/>
+  <circle cx="470" cy="180" r="30" class="active"/><text x="470" y="188" fill="#fff" class="latin">K1</text>
+  <circle cx="470" cy="335" r="30" class="idle"/><text x="470" y="343" class="latin">K2</text>
+  <circle cx="570" cy="180" r="43" class="active"/><text x="570" y="188" fill="#fff" class="latin">1</text>
+  <circle cx="570" cy="335" r="38" class="ready"/><text x="570" y="343" class="latin">2</text>
+  <text x="550" y="415" class="small">چرخ‌دندهٔ ۲ آماده است</text>
+  <text x="550" y="446" class="small">اما K2 هنوز گشتاور نمی‌دهد</text>
+
+  <rect x="745" y="78" width="320" height="395" class="panel"/>
+  <text x="905" y="116" class="label">۳. انتقال کلاچ‌ها</text>
+  <line x1="815" y1="180" x2="995" y2="180" class="shaft"/>
+  <line x1="815" y1="335" x2="995" y2="335" class="shaft"/>
+  <circle cx="825" cy="180" r="30" class="idle"/><text x="825" y="188" class="latin">K1</text>
+  <circle cx="825" cy="335" r="30" class="active"/><text x="825" y="343" fill="#fff" class="latin">K2</text>
+  <circle cx="925" cy="180" r="43" class="idle"/><text x="925" y="188" class="latin">1</text>
+  <circle cx="925" cy="335" r="38" class="active"/><text x="925" y="343" fill="#fff" class="latin">2</text>
+  <text x="905" y="415" class="small">K1 آزاد و K2 درگیر می‌شود</text>
+  <text x="905" y="446" class="small">هم‌پوشانی، فشار و لغزش کنترل می‌شوند</text>
+
+  <path d="M355 275 H390" class="step"/>
+  <path d="M710 275 H745" class="step"/>
+  <rect x="210" y="510" width="680" height="55" rx="14" fill="#eff6f5" stroke="#147d78" stroke-width="2"/>
+  <text x="550" y="545" class="small">خشک یا تر بودن کلاچ، ظرفیت حرارتی و سامانهٔ خنک‌کاری را تغییر می‌دهد؛ «همیشه بهتر» حکم مهندسی نیست.</text>
+</svg>

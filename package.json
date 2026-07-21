@@ -1,0 +1,31 @@
+{
+  "name": "auto-mechanic-fa",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Single-source Quarto sample for General Automotive Mechanics in Persian",
+  "type": "module",
+  "scripts": {
+    "bootstrap:tools": "node scripts/bootstrap-tools.mjs",
+    "setup:browsers": "node scripts/setup-browsers.mjs",
+    "dev": "node scripts/dev.mjs",
+    "build:web": "node scripts/build.mjs web",
+    "build:pdf": "node scripts/build.mjs pdf",
+    "build": "node scripts/build.mjs all",
+    "test:content": "node scripts/test-content.mjs",
+    "test:web": "node scripts/test-web.mjs",
+    "test:pdf": "node scripts/test-pdf.mjs",
+    "test:visual": "node scripts/test-web.mjs --visual",
+    "audit:coverage": "node scripts/test-content.mjs --coverage-only",
+    "test": "npm run test:content && npm run build && npm run test:web && npm run test:pdf"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.12.1",
+    "@sparticuz/chromium": "149.0.0",
+    "playwright": "1.61.1",
+    "selenium-webdriver": "4.46.0",
+    "yaml": "2.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

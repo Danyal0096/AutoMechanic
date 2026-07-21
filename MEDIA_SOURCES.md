@@ -1,21 +1,40 @@
 # منابع و دفتر رسانه
 
-> وضعیت Gate 1: هیچ رسانه‌ای در محصول ادغام نشده است. انتخاب و دانلود رسانه پیش از تصویب معماری و روشن‌شدن حقوق انجام نمی‌شود.
+> وضعیت Gate 2: سیاست رسانه در Gate 1 تصویب شد و شش SVG اصیل M08 با منبع، حق، hash و بازبینی ثبت شده‌اند.
 
 ## وضعیت پایه
 
 - ممیزی، وجود ۱۵۸ تصویر در ۲۰ مقالهٔ مبدأ را ثبت کرده است.
 - دسترسی عمومی به مقاله یا تصویر، مجوز بازنشر نیست.
 - تصاویر مقاله‌ها در این مرحله فقط برای فهم منبع دیده شده‌اند؛ هیچ فایل آن‌ها در مخزن کپی نشده است.
-- media manifest ادغام‌شده در این نسخه **صفر ردیف** دارد؛ بنابراین attribution ناقص پنهانی وجود ندارد.
+- رسانهٔ آموزشی نمونه فقط شش SVG اصیل و غیر‌فریبنده است؛ هیچ تصویر مقاله یا رسانهٔ بیرونی بازنشر نشده است.
 
 ## ثبت رسانه‌های ادغام‌شده
 
 | Media ID | Module/section | Purpose | Type | Creator/organization | Original URL | License/permission | Local file | Static PDF treatment | Alt/caption status | Checksum | Review status |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| — | — | هیچ موردی تا Gate 1 ادغام نشده است | — | — | — | — | — | — | — | — | Not started |
+| MED-M08-001 | M08 / نقشه | جداسازی مسیر توان و فرمان کنترل | SVG conceptual system map | AutoMechanic project | —؛ ساخته‌شده در مخزن | Original project work؛ بدون ورودی تصویری ثالث | `assets/diagrams/m08-system-map.svg` | همان SVG برداری | عنوان، توضیح، alt و caption بازبینی شد | `b93928569c7f7eedb671e075857336ca01837592964afc80f18954905642f653` | Verified |
+| MED-M08-002 | M08 / ۸٫۲ | نمایش قید میانگین دور در مستقیم و پیچ | SVG conceptual two-state diagram | AutoMechanic project | —؛ ساخته‌شده در مخزن | Original project work؛ بدون ورودی تصویری ثالث | `assets/diagrams/differential-kinematics.svg` | همان SVG برداری | عنوان، توضیح، alt و caption بازبینی شد | `0c33fd5637bbcc8b703b246f86dbd89fdc232a01e80a308d9f59f75a3ec8555c` | Verified |
+| MED-M08-003 | M08 / ۸٫۴ | مسیر سیال و مسیر موازی lock-up | SVG conceptual flow diagram | AutoMechanic project | —؛ ساخته‌شده در مخزن | Original project work؛ بدون ورودی تصویری ثالث | `assets/diagrams/torque-converter-flow.svg` | همان SVG برداری | عنوان، توضیح، alt و caption بازبینی شد | `29c790c974d9a443c1d1fb4e8ea7a6da2da9e111df8ebecceb7a3386020e53e7` | Verified |
+| MED-M08-004 | M08 / ۸٫۶ | اعضا، معادله و حالت‌های پایهٔ سیاره‌ای | SVG conceptual state map | AutoMechanic project | —؛ ساخته‌شده در مخزن | Original project work؛ بدون ورودی تصویری ثالث | `assets/diagrams/planetary-control-map.svg` | همان SVG برداری | عنوان، توضیح، alt و caption بازبینی شد | `2b1f7fafe9c131d76264ede3936c6cffb7cc25043a77d6c90b925c814bbd467b` | Verified |
+| MED-M08-005 | M08 / ۸٫۸ | توالی حرکت، پیش‌انتخاب و تحویل DCT | SVG conceptual sequence | AutoMechanic project | —؛ ساخته‌شده در مخزن | Original project work؛ بدون ورودی تصویری ثالث | `assets/diagrams/dct-preselection.svg` | همان توالی سه‌پنلی | عنوان، توضیح، alt و caption بازبینی شد | `7362b6145f1c4f20e50dba1f76c5526be80235bdc0ac68aae4303f1b64643e06` | Verified |
+| MED-M08-006 | M08 / ۸٫۹ | بازسازی نسبت CVT با شعاع مؤثر | SVG conceptual two-state diagram | AutoMechanic project | —؛ ساخته‌شده در مخزن | Original project work؛ بدون ورودی تصویری ثالث | `assets/diagrams/cvt-effective-radius.svg` | همان SVG؛ جایگزین ثابت آزمایشگاه وب | عنوان، توضیح، alt و caption بازبینی شد | `06aa27306b724f0888e42f5c971b4b5d7ec6ce69f0740a7178a2e2af56c84bf2` | Verified |
 
-هنگام آغاز Phase 3، ردیف placeholder حذف و هر فایل پیش از استفاده با شناسهٔ پایدار (`MED-M08-001` و مانند آن) ثبت می‌شود. نبود ردیف manifest برای فایل موجود در `assets/images/` باید تست را fail کند.
+نبود ردیف manifest برای هر فایل موجود در `assets/diagrams/` تست را fail می‌کند.
+
+## دارایی‌های تایپوگرافی
+
+Vazirmatn نسخهٔ 33.0.3 در قالب TTF برای XeLaTeX و WOFF2 برای وب به‌صورت محلی
+قرار دارد. مجوز SIL OFL 1.1 در `assets/fonts/OFL.txt` و شرح کامل در
+`THIRD_PARTY_NOTICES.md` است. checksumها:
+
+| File | SHA-256 |
+|---|---|
+| `Vazirmatn-Regular.ttf` | `b69fd4c680b8f3f225feabcc655a2c585d97627b8f5f5c0f9985e894069f3a56` |
+| `Vazirmatn-Bold.ttf` | `f635fdbea28f265de395ba83b4b1570dcf2f58d13c65469e61903b1c2d2ae723` |
+| `Vazirmatn-Regular.woff2` | `e382101336c6eb32cfb31381c027d02d2e0354bad08f6a395d4088beb3db3d91` |
+| `Vazirmatn-Bold.woff2` | `836fae7d42d83faa249bc00e0099592be98a1fa260d22d82f269b6091e585627` |
+| `OFL.txt` | `17e355067c8284f47743a1ee3b1ef7ff684ff0601eda357f9353b10b3016ab31` |
 
 ## فیلدهای اجباری و قواعد پذیرش
 
@@ -96,11 +115,6 @@
 7. **PDF fallback:** فریم/توالی/URL آزمایش شود؛ QR جای توضیح اصلی نیست.
 8. **QA:** لینک، checksum، attribution، contrast، grayscale، zoom و print.
 
-## تصمیم باز Gate 1
+## تصمیم مصوب Gate 1
 
-مالک پروژه باید یکی را تأیید کند:
-
-- **پیشنهاد امن:** تصاویر مبدأ بازنشر نشوند مگر مجوز هر مورد اثبات شود؛ شکل‌های ساده اصیل و رسانه‌های بیرونی دارای مجوز استفاده شوند.
-- **استفاده با اجازه:** اگر اجازهٔ صریح از استاد/AMEG وجود دارد، متن اجازه و حدود آن (بازنویسی، تصویر، وب عمومی، PDF، تغییر/ترجمه) ثبت شود.
-
-تا آن تصمیم، هیچ‌یک از MRها وارد وضعیت `candidate` عملی نمی‌شود و Phase 3 فقط می‌تواند از placeholder غیرواقعی مشخص یا شکل سادهٔ اصیل استفاده کند.
+تصاویر مقاله‌های مبدأ به‌صورت پیش‌فرض بازنشر نمی‌شوند مگر مجوز مناسب هر مورد روشن باشد. اولویت نمونه با SVGهای اصیل، ساده و غیر‌فریبندهٔ روابط سامانه‌ای است؛ رسانهٔ بیرونی فقط با مجوز/اعتبار کامل وارد می‌شود. هیچ placeholder آموزشی در نمونهٔ نهایی پذیرفته نیست.

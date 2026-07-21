@@ -1,0 +1,77 @@
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[skins,breakable]{tcolorbox}
+\usepackage{bookmark}
+\usepackage{xurl}
+\usepackage{etoolbox}
+\usepackage{xepersian}
+
+% Quarto declares fontawesome5 for callout icons even when callout-icon=false.
+% Mark the icon package as intentionally unavailable; no icon command is emitted.
+\makeatletter
+\@namedef{ver@fontawesome5.sty}{2026/07/21 no-icons compatibility}
+\makeatother
+
+\definecolor{AutoMechanicBlue}{HTML}{174B63}
+\definecolor{AutoMechanicTeal}{HTML}{147D78}
+\definecolor{AutoMechanicAmber}{HTML}{B56B17}
+\definecolor{AutoMechanicInk}{HTML}{1E2933}
+\definecolor{AutoMechanicPale}{HTML}{EFF6F5}
+
+\settextfont[
+  Path=assets/fonts/,
+  Extension=.ttf,
+  UprightFont=*-Regular,
+  BoldFont=*-Bold,
+  ItalicFont=*-Regular,
+  BoldItalicFont=*-Bold,
+  Scale=1.02
+]{Vazirmatn}
+\setlatintextfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\DefaultMathDigits
+
+\AtBeginDocument{\hypersetup{
+  unicode=true,
+  pdflang={fa-IR},
+  pdfauthor={برگرفته از آموزه‌های استاد نصیری},
+  pdftitle={مکانیک خودرو عمومی — نمونهٔ ماژول ۰۸},
+  pdfsubject={گرداننده نهایی، دیفرانسیل و معماری‌های گیربکس خودکار}
+}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\small\color{AutoMechanicBlue} مکانیک خودرو عمومی}
+\fancyhead[L]{\small\color{AutoMechanicInk} نمونهٔ ماژول ۰۸}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.35pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.48em}
+\setlength{\emergencystretch}{2.5em}
+\renewcommand{\arraystretch}{1.28}
+\setcounter{secnumdepth}{-\maxdimen}
+\setcounter{tocdepth}{2}
+\renewcommand{\theequation}{\arabic{equation}}
+\renewcommand{\thefigure}{\arabic{figure}}
+\renewcommand{\thetable}{\arabic{table}}
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\raggedbottom
+
+\makeatletter
+\renewcommand{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi
+  \thispagestyle{plain}\global\@topnum\z@
+  \@afterindentfalse\secdef\@chapter\@schapter}
+\makeatother

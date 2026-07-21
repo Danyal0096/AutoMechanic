@@ -4,6 +4,32 @@
 
 ## [Unreleased]
 
+### Added — Phase 3: Representative M08 Sample (2026-07-21)
+
+- کتاب Quarto تک‌منبعی با نمونهٔ کامل M08، پاسخ‌نامه، واژه‌نامه و منابع؛
+- خروجی وب ایستای RTL با جست‌وجو، navigation، پاورقی، MathML بومی و آزمایشگاه تعاملی CVT؛
+- خروجی رسمی XeLaTeX/XePersian در ۲۵ صفحهٔ A4؛
+- شش SVG اصیل برای نقشهٔ سامانه، دیفرانسیل، مبدل، سیاره‌ای، DCT و CVT؛
+- ۲۹ نگاشت پوشش M08 با anchor واقعی، ۱۸ پاورقی اصطلاح، ۲۰ مدخل واژه‌نامه و شش سنجش با پاسخ تشریحی؛
+- ابزار bootstrap نسخه‌دار، lockfile و commandهای build/test برای وب و PDF؛
+- `PHASE3_AUDIT.md` با شواهد خودممیزی و تصمیم‌های لازم در Gate 2.
+
+### Changed — Phase 3
+
+- ENG-023 تا ENG-029 در M08 اجرا شدند؛ به‌ویژه مدل CVT بر اساس شعاع مؤثر، قرارداد نسبت و بازده بازسازی شد؛
+- ردیف‌های S12–S15 از `Mapped` به `Sample verified` و anchorهای واقعی ارتقا یافتند؛
+- ARC-002 از provisional به `Sample proven` رسید و نسخه‌های آزموده‌شده برای pin در Gate 2 پیشنهاد شدند؛
+- PUB-001 با workflow دائمی GitHub read-only و تحویل ZIP/patch/bundle/manifest حل شد.
+
+### Approved — Approval Gate 1 (2026-07-21)
+
+- معماری ده‌ماژولی و حجم ۱۰۸–۱۳۵ صفحه با ذخیره تا ۱۴۵ صفحه؛
+- Quarto Book، HTML ایستا، XeLaTeX/XePersian و یک منبع QMD مشترک، به‌صورت موقت تا اثبات نمونه؛
+- محاسبات دانشگاهی مقدماتی، بازسازی صحیح CVT و طبقه‌بندی سه‌گانهٔ تعلیق؛
+- محدودیت ADAS به نقشهٔ فشرده و انتخاب M08 برای نمونهٔ Phase 3؛
+- بازنویسی تحول‌آفرین متن و منع بازنشر تصویر مبدأ بدون مجوز روشن؛
+- workflow دائمی GitHub read-only: کامیت محلی و تحویل ZIP/patch/bundle/manifest برای push دستی.
+
 ### Added — Phase 2: Architecture Proposal (2026-07-21)
 
 - پیشنهاد معماری آموزشی ده‌ماژولی با اهداف، توالی، نگاشت و بودجهٔ صفحه؛
@@ -28,10 +54,17 @@
 - بازیابی و استخراج ۲۰/۲۰ منبع؛
 - حضور همهٔ S00–S19 در coverage matrix؛
 - معتبر بودن URL اصلاح‌شدهٔ S19؛
-- نبود آغاز sample، web، PDF یا full production پیش از Gate 1.
+- ۲۸/۲۸ کنترل محتوا، ۷۱/۷۱ کنترل وب و ۲۵/۲۵ کنترل PDF؛
+- رندر و بازبینی دیداری تمام ۲۵ صفحهٔ PDF و screenshotهای کلیدی وب؛
+- صفر تصویر مقالهٔ مبدأ و انطباق checksum شش SVG اصیل؛
+- build مستقل از clone تمیز با خروجی وب/PDF byte-for-byte یکسان؛
+- نبود آغاز full production یا ماژول‌های دیگر پیش از Gate 2.
 
 ### Known limitations
 
-- تصویب معماری/stack و وضعیت حقوق رسانه باز است؛
-- push شاخه به GitHub در صورت نبود مجوز اتصال blocked است؛
+- نسخهٔ آزموده‌شدهٔ stack و template تا تصمیم Gate 2 خط مبنای پیشنهادی است؛
+- XeLaTeX کامل dependency میزبان است و هنوز hermetic بسته‌بندی نشده است؛
+- عرض دقیق ۳۶۰/۳۹۰ در Chromium پوشش دارد؛ Firefox headless این میزبان حداقل viewport داخلی ۴۳۸ پیکسل ایجاد می‌کند؛
+- WebKit و regression کامل performance/visual به L3 موکول‌اند؛
+- رسانهٔ مبدأ بدون مجوز روشن قابل بازنشر نیست؛
 - `CODEX_AUDIT_BRIEF.md` تا محصول واقعی در Phase 6 به‌تعویق افتاده است.

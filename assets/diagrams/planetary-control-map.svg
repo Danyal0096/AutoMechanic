@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" role="img" aria-labelledby="title desc">
+  <title id="title">نقشه اعضا و حالت‌های پایه مجموعه سیاره‌ای ساده</title>
+  <desc id="desc">سه عضو خورشیدی، رینگی و حامل با رابطه سرعت مشترک نمایش داده شده‌اند و سه حالت نمونه کاهش، حرکت مستقیم و معکوس در جدول آمده است.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#174b63"/>
+    </marker>
+    <style>
+      .node{stroke-width:4;rx:22}
+      .link{fill:none;stroke:#174b63;stroke-width:4;marker-end:url(#arrow)}
+      .label{font-family:'DejaVu Sans',sans-serif;font-size:26px;font-weight:700;fill:#1e2933;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .small{font-family:'DejaVu Sans',sans-serif;font-size:19px;fill:#566673;text-anchor:middle;direction:rtl;unicode-bidi:bidi-override}
+      .latin{font-family:'DejaVu Sans',sans-serif;font-size:21px;fill:#174b63;text-anchor:middle;direction:ltr}
+      .cell{fill:#fbfcfc;stroke:#cbd8dc;stroke-width:1.5}
+    </style>
+  </defs>
+  <rect width="1100" height="620" fill="#fff"/>
+  <text x="550" y="42" class="label">مجموعهٔ سیاره‌ای سه عضو مستقل دارد؛ یک معادله کافی نیست، دو شرط کاری هم لازم است</text>
+
+  <rect x="95" y="105" width="260" height="115" fill="#e9f2f6" stroke="#174b63" class="node"/>
+  <rect x="420" y="105" width="260" height="115" fill="#e9f7f4" stroke="#147d78" class="node"/>
+  <rect x="745" y="105" width="260" height="115" fill="#fff4e5" stroke="#b56b17" class="node"/>
+  <text x="225" y="150" class="label">خورشیدی</text><text x="225" y="185" class="latin">sun: Ns, ωs</text>
+  <text x="550" y="150" class="label">حامل</text><text x="550" y="185" class="latin">carrier: ωc</text>
+  <text x="875" y="150" class="label">رینگی</text><text x="875" y="185" class="latin">ring: Nr, ωr</text>
+  <path d="M355 162 H420" class="link"/>
+  <path d="M680 162 H745" class="link"/>
+
+  <rect x="170" y="255" width="760" height="78" rx="16" fill="#eff6f5" stroke="#147d78" stroke-width="2"/>
+  <text x="550" y="304" class="latin">Ns ωs + Nr ωr = (Ns + Nr) ωc</text>
+
+  <text x="550" y="375" class="label">سه حالت آموزشی نمونه — نه فهرست همهٔ معماری‌های واقعی</text>
+  <rect x="65" y="405" width="970" height="55" class="cell"/>
+  <rect x="65" y="460" width="970" height="55" class="cell"/>
+  <rect x="65" y="515" width="970" height="55" class="cell"/>
+  <line x1="270" y1="405" x2="270" y2="570" stroke="#cbd8dc" stroke-width="2"/>
+  <line x1="525" y1="405" x2="525" y2="570" stroke="#cbd8dc" stroke-width="2"/>
+  <line x1="780" y1="405" x2="780" y2="570" stroke="#cbd8dc" stroke-width="2"/>
+  <text x="165" y="440" class="label">حالت</text><text x="397" y="440" class="label">ورودی</text><text x="652" y="440" class="label">عضو مقید</text><text x="907" y="440" class="label">خروجی/اثر</text>
+  <text x="165" y="498" class="small">کاهش جلو</text><text x="397" y="498" class="small">خورشیدی</text><text x="652" y="498" class="small">رینگی ثابت</text><text x="907" y="498" class="small">حامل، هم‌جهت و کندتر</text>
+  <text x="165" y="553" class="small">حرکت مستقیم</text><text x="397" y="553" class="small">دو عضو قفل‌شده</text><text x="652" y="553" class="small">حرکت نسبی صفر</text><text x="907" y="553" class="latin">1:1</text>
+  <text x="550" y="605" class="small">برای ایجاد معکوس می‌توان حامل را ثابت و یکی از چرخ‌دنده‌ها را ورودی گرفت؛ علامت سرعت خروجی تغییر می‌کند.</text>
+</svg>

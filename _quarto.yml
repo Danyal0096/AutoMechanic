@@ -1,0 +1,87 @@
+project:
+  type: book
+  render:
+    - index.qmd
+    - content/m08.qmd
+    - content/m08-answers.qmd
+    - content/glossary.qmd
+    - content/references.qmd
+  resources:
+    - assets/fonts/
+    - assets/js/
+
+lang: fa
+dir: rtl
+language: _language-fa.yml
+bibliography: references/references.bib
+link-citations: true
+filters:
+  - filters/rtl.lua
+
+book:
+  title: "مکانیک خودرو عمومی"
+  subtitle: "برگرفته از آموزه‌های استاد نصیری — نمونهٔ کامل ماژول ۰۸"
+  author: "نسخهٔ آموزشی دانشگاهی"
+  output-file: auto-mechanic-fa
+  page-navigation: true
+  search:
+    location: sidebar
+    type: overlay
+  sidebar:
+    style: docked
+    collapse-level: 2
+  chapters:
+    - index.qmd
+    - content/m08.qmd
+    - content/m08-answers.qmd
+    - content/glossary.qmd
+    - content/references.qmd
+
+crossref:
+  chapters: false
+
+format:
+  html:
+    lang: fa
+    dir: rtl
+    theme:
+      - default
+      - assets/css/theme.scss
+    css: assets/css/styles.css
+    toc: true
+    toc-depth: 3
+    number-sections: false
+    anchor-sections: true
+    smooth-scroll: true
+    html-math-method: mathml
+    code-copy: false
+    link-external-newwindow: true
+  pdf:
+    pdf-engine: xelatex
+    documentclass: book
+    classoption:
+      - oneside
+      - openany
+    papersize: a4
+    fontsize: 11pt
+    geometry:
+      - top=23mm
+      - bottom=25mm
+      - inner=25mm
+      - outer=21mm
+      - headheight=15pt
+    toc: true
+    toc-depth: 2
+    number-sections: false
+    keep-tex: true
+    colorlinks: true
+    linkcolor: AutoMechanicBlue
+    urlcolor: AutoMechanicTeal
+    citecolor: AutoMechanicBlue
+    fig-pos: "tbp"
+    callout-icon: false
+    include-in-header:
+      - print/preamble.tex
+
+execute:
+  freeze: true

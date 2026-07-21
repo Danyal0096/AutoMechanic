@@ -1,6 +1,6 @@
 # پیشنهاد معماری آموزشی و فنی
 
-> وضعیت: پیشنهاد مرحلهٔ ۲ — نیازمند تصویب در Approval Gate 1
+> وضعیت: معماری مصوب Gate 1؛ نمونهٔ Phase 3 اثبات شد و pin دقیق stack برای Gate 2 پیشنهاد شده است
 
 ## خلاصهٔ تصمیم
 
@@ -9,7 +9,7 @@
 - کتاب وب ایستا، پاسخ‌گو، فارسی و RTL؛
 - PDF رسمی و قابل چاپ با XeLaTeX/XePersian.
 
-این سند مجوز آغاز نمونه یا پیاده‌سازی نیست. پس از کامیت، پروژه در Gate 1 متوقف می‌شود.
+این معماری در Gate 1 تصویب شده و مجوز ساخت نمونهٔ کامل M08 را می‌دهد. تولید کامل ماژول‌های دیگر تا Gate 2 ممنوع است.
 
 ## اصول طراحی
 
@@ -325,33 +325,33 @@ flowchart TD
 | M09 | هیدرولیک ترمز، حلقه ABS، آکرمن، کمک‌فرمان | schematic اصیل | Critical |
 | M10 | انواع تعلیق، زوایا، دمپر، سازه/crumple | عکس/مقطع معتبر + overlay | Critical |
 
-۱۵۸ تصویر مبدأ صرفاً فهرست audit هستند. انتخاب/ادغام رسانه تا تصمیم حقوقی Gate 1 و مرحلهٔ نمونه آغاز نمی‌شود. manifest و سیاست در [`MEDIA_SOURCES.md`](MEDIA_SOURCES.md) آمده است.
+۱۵۸ تصویر مبدأ صرفاً فهرست audit هستند. تصمیم حقوقی Gate 1 بازنشر پیش‌فرض آن‌ها را منع کرد؛ نمونهٔ M08 به‌جای آن شش SVG اصیل و ثبت‌شده دارد. manifest و سیاست در [`MEDIA_SOURCES.md`](MEDIA_SOURCES.md) آمده است.
 
 ## پشتهٔ فنی پیشنهادی
 
 | لایه | انتخاب | دلیل |
 |---|---|---|
 | منبع محتوا | Quarto Book (`.qmd` + YAML data) | Markdown خوانا، فصل‌بندی، footnote/citation/cross-reference و دو خروجی از منبع مشترک |
-| نسخهٔ مبنا | Quarto 1.9، سپس pin دقیق پس از نمونه | نسخهٔ جاری رسمی در زمان ممیزی؛ pin فقط پس از اثبات RTL/PDF از قفل‌شدن روی نسخهٔ ناکارآمد جلوگیری می‌کند |
+| نسخهٔ مبنا | Quarto 1.9.38 + Pandoc 3.8.3 | نمونهٔ مشترک HTML/PDF با این دو نسخه عبور کرد؛ download و checksum در bootstrap pin شده‌اند |
 | وب | HTML ایستا Quarto + SCSS/CSS logical + مقدار کم ES module | بدون سرور و hydration؛ جست‌وجو/فهرست/پیوند داخلی؛ کنترل مستقیم RTL |
-| PDF | XeLaTeX + XePersian در TeX Live pin‌شده | حروف‌چینی فارسی/انگلیسی، فونت، پاورقی، bookmark و کنترل کتابی |
+| PDF | XeLaTeX در TeX Live 2023 + XePersian 24.8 | حروف‌چینی فارسی/انگلیسی، فونت، پاورقی، bookmark و کنترل کتابی؛ ۲۵ صفحهٔ نمونه کامل رندر شد |
 | منابع | BibTeX + CSL/Quarto citations | ردیابی و کتاب‌نامهٔ مشترک |
 | دادهٔ کمکی | YAML برای اصطلاح‌نامه و media manifest | lintپذیر و قابل استفاده در هر دو خروجی |
 | اسکریپت کیفیت | Node.js LTS، بدون framework برنامه | audit منبع، lint فارسی/پوشش/لینک و orchestration کم‌پیچیدگی |
-| آزمون وب | Playwright + `@axe-core/playwright` | viewport واقعی، bidi، تعامل، accessibility و visual regression |
+| آزمون وب | Playwright 1.61.1 + axe 4.12.1؛ Chromium 149 و Firefox ESR 140.12 | viewport واقعی، bidi، تعامل، accessibility و visual regression؛ ماتریس L1 عبور کرده است |
 | آزمون PDF | `qpdf`, `pdftotext`, `pdffonts`, Poppler render + بازبینی بصری | ساختار، جست‌وجوپذیری، فونت، تعداد صفحه و شکست‌های چاپ |
-| بازتولیدپذیری | lockfile Node + نسخهٔ Quarto/TeX مستند؛ CI پس از نمونه | build قابل تکرار بدون تعهد زودهنگام به image سنگین |
+| بازتولیدپذیری | lockfile Node، bootstrap checksumدار و baseline TeX مستند | build محلی اثبات شده؛ تأمین کامل XeLaTeX همچنان dependency میزبان است |
 
 ### چرا SPA یا دو manuscript نه؟
 
-محصول مسیر مطالعهٔ کتابی دارد، نه وضعیت پیچیدهٔ برنامه. React/SPA بار عملیاتی و ریسک bidi/hydration می‌افزاید بی‌آنکه ارزش آموزشی متناسب ایجاد کند. دو manuscript نیز به‌سرعت واژگان، شکل و ارجاعات را منحرف می‌کند. Quarto به‌طور رسمی از [کتاب چندفصلی](https://quarto.org/docs/books/) و [HTML/PDF](https://quarto.org/docs/output-formats/pdf-basics.html) از یک پروژه پشتیبانی می‌کند؛ [گزینهٔ `dir`](https://quarto.org/docs/reference/formats/html.html) و XeLaTeX/XePersian پایهٔ آزمون نمونه خواهند بود.
+محصول مسیر مطالعهٔ کتابی دارد، نه وضعیت پیچیدهٔ برنامه. React/SPA بار عملیاتی و ریسک bidi/hydration می‌افزاید بی‌آنکه ارزش آموزشی متناسب ایجاد کند. دو manuscript نیز به‌سرعت واژگان، شکل و ارجاعات را منحرف می‌کند. Quarto به‌طور رسمی از [کتاب چندفصلی](https://quarto.org/docs/books/) و [HTML/PDF](https://quarto.org/docs/output-formats/pdf-basics.html) از یک پروژه پشتیبانی می‌کند؛ [گزینهٔ `dir`](https://quarto.org/docs/reference/formats/html.html) و XeLaTeX/XePersian پایهٔ آزمون موفق نمونه بودند.
 
 ## معماری وب
 
 - خروجی static و قابل بازکردن محلی با HTTP server ساده؛ بدون پایگاه‌داده/حساب کاربری.
 - ناوبری: فهرست persistent در desktop، drawer در mobile، previous/next فارسی، breadcrumb در صورت سود.
 - صفحهٔ ماژول: عنوان، system map، اهداف، بخش‌ها، ارجاعات، سنجش و پیوند پاسخ.
-- search سمت client با واژگان فارسی/انگلیسی؛ کیفیت tokenization فارسی در نمونه سنجیده می‌شود.
+- search سمت client با واژگان فارسی/انگلیسی؛ حضور هر دو نوع واژه در index نمونه آزموده شد.
 - رسانه: `figure`/`figcaption`، تصویر responsive، zoom با dialog دسترس‌پذیر فقط اگر واقعاً لازم؛ video با controls و poster.
 - assessment reveal با `<details>` یا الگوی progressive enhancement؛ بدون JS نیز قابل خواندن.
 - performance: فونت self-host با subset مجاز، تصویر responsive WebP/AVIF با fallback، lazy loading غیرcritical؛ هیچ tracker.
@@ -367,11 +367,11 @@ flowchart TD
 - تصاویر raster با وضوح چاپ و grayscale check؛ خط/برچسب برای تمایز، نه فقط رنگ.
 - GIF/video با فریم کلیدی یا sequence کوتاه و URL/QR اختیاری؛ محتوای ضروری به حرکت وابسته نیست.
 - preflight: فونت embedded، لینک، bookmark، متن استخراج‌پذیر، تعداد صفحه، صفحه سفید ناخواسته و رندر ۱۵۰dpi همه صفحات.
-- نمونهٔ Phase 3 باید دشوارترین موارد bidi، footnote، جدول، معادله، شکل و page break را پیش از انتخاب نهایی template اثبات کند.
+- نمونهٔ Phase 3 دشوارترین موارد bidi، footnote، جدول، معادله، شکل و page break را اثبات کرد؛ template فعلی نامزد تثبیت در Gate 2 است.
 
-## ساختار پیشنهادی مخزن
+## ساختار هدف مخزن
 
-این درخت طرح مرحلهٔ بعد است و تا تصویب ساخته نمی‌شود:
+این درخت، مقصد تولید کامل است. Phase 3 فقط زیرمجموعهٔ لازم برای M08 را با ساختار واقعی ثبت‌شده در `README.md` ساخته است؛ فایل‌های سایر ماژول‌ها تا Gate 2 ایجاد نمی‌شوند:
 
 ```text
 AutoMechanic/
@@ -399,7 +399,7 @@ AutoMechanic/
 └── _output/{web,pdf}/          # generated; not authoritative
 ```
 
-نام‌های دقیق module پس از تصویب ثابت می‌شوند. artifact تولیدشده در git نگهداری نمی‌شود مگر release policy بعداً آن را لازم کند.
+نام‌های دقیق moduleهای باقی‌مانده پس از Gate 2 ثابت می‌شوند. artifact تولیدشده در git نگهداری نمی‌شود و در بستهٔ تحویل phase قرار می‌گیرد.
 
 ## برآورد صفحه و حجم
 
@@ -425,8 +425,8 @@ AutoMechanic/
 
 | مرحله | خروجی | شرط خروج |
 |---|---|---|
-| Gate 1 (اکنون) | ممیزی + معماری + تصمیم‌ها | تصویب صریح کاربر |
-| Phase 3 | یک ماژول نماینده، ترجیحاً M08 یا M06، در وب و PDF | آزمون نوشتار، رسانه، اصطلاح، bidi، assessment و build |
+| Gate 1 | ممیزی + معماری + تصمیم‌ها | **عبور کرده در ۲۰۲۶-۰۷-۲۱** |
+| Phase 3 | M08 کامل در وب و PDF | **کامل؛ آزمون نوشتار، رسانه، اصطلاح، bidi، assessment و build عبور کرد** |
 | Gate 2 | گزارش نمونه و تصمیم template/stack pin | تصویب صریح کاربر؛ بدون آن تولید کامل ممنوع |
 | Phase 4A | M01–M03 + glossary seed | coverage/technical/language review |
 | Phase 4B | M04–M06 | review میان‌مرحله و کنترل حجم |
@@ -435,7 +435,7 @@ AutoMechanic/
 | Phase 5 | خودممیزی کامل و اصلاح | تمام تست‌ها، visual PDF/web، coverage closed |
 | Phase 6 | `CODEX_AUDIT_BRIEF.md` و artifact بازرسی | آمادهٔ audit مستقل؛ نه تأیید خودکار محتوایی |
 
-انتخاب ماژول نمونه در Gate 1 نهایی می‌شود. M08 بیشترین تنوع نمودار/مقایسه/اصلاح CVT را می‌آزماید؛ M06 بیشترین تراکم اصطلاح، سنسور و تشخیص را. پیشنهاد فعلی M08 است، مشروط به تصویب بازسازی CVT.
+M08 در Gate 1 به‌عنوان نمونهٔ نماینده انتخاب شد؛ این ماژول تنوع نمودار، مقایسه، محاسبه و بازسازی مصوب CVT را می‌آزماید.
 
 ## ریسک‌ها و کنترل‌ها
 
@@ -448,18 +448,13 @@ AutoMechanic/
 | افزایش بی‌رویهٔ دامنه | Medium / High | coverage matrix، سقف صفحه و rejected expansion | معماری |
 | تراکم بیش از حد M06/M08/M10 | Medium / Medium | بودجهٔ صفحه، system map و ادغام تکرار | معماری |
 | پوسیدگی لینک/رسانه | Medium / Medium | local critical assets، checksum و link test | فنی/رسانه |
-| فونت یا build غیرقابل بازتولید | Medium / High | مجوز/نسخه/embedding، pin پس از نمونه | Gate 2 |
+| فونت یا build غیرقابل بازتولید | Medium / High | مجوز/نسخه/embedding؛ pin نامزد پس از نمونه ثبت شد؛ XeLaTeX میزبان هنوز ریسک است | Gate 2 |
 | سنجش کم‌عمق یا پاسخ مبهم | Medium / High | rubric، audit answer uniqueness و سؤال علّی | آموزشی |
-| GitHub write integration | اکنون / Critical | رفع permission و push کامیت‌های آماده | کاربر/اتصال |
+| تحویل دستی GitHub | Low / Medium | حفظ کامیت محلی + ZIP/patch/bundle/manifest در پایان هر phase | عامل/مالک پروژه |
 
-## تصمیم‌های درخواستی در Gate 1
+## تصمیم‌های ثبت‌شدهٔ Gate 1
 
-1. معماری و توالی ده‌ماژولی را تصویب می‌کنید؟
-2. Quarto Book + HTML static + XeLaTeX/XePersian و اصل QMD مشترک را تصویب می‌کنید؟
-3. سطح محاسبات مقدماتی دانشگاهی و نسبت سنجش پیشنهادی را تصویب می‌کنید؟
-4. بازسازی توضیح/شکل CVT و طبقه‌بندی سه‌گانهٔ تعلیق را مجاز می‌دانید؟
-5. مرور ADAS به همان ۲–۳ صفحهٔ فشرده در M10 محدود بماند؟
-6. وضعیت مجوز اقتباس و تصاویر چیست؛ سیاست پیش‌فرض «عدم بازنشر تا اثبات مجوز» تأیید می‌شود؟
-7. برای Phase 3 پس از Gate 1، M08 به‌عنوان نمونهٔ نماینده انتخاب شود یا M06؟
-
-پاسخ به این موارد فقط اجازهٔ آغاز Phase 3 را می‌دهد؛ تولید کامل همچنان به Gate 2 وابسته است.
+- معماری ده‌ماژولی، محاسبات دانشگاهی مقدماتی، بازسازی CVT، طبقه‌بندی تعلیق و محدودیت ADAS مصوب‌اند.
+- Quarto Book + HTML static + XeLaTeX/XePersian و اصل QMD مشترک مصوب‌اند؛ نسخه‌های اثبات‌شده اکنون pin شده و برای تثبیت در Gate 2 پیشنهاد می‌شوند.
+- متن‌ها به‌صورت تحول‌آفرین بازنویسی می‌شوند؛ تصویر مبدأ بدون مجوز روشن بازنشر نمی‌شود و SVG اصیل غیر‌فریبنده اولویت دارد.
+- M08 نمونهٔ Phase 3 است؛ عبور به تولید کامل فقط با تصویب Gate 2 ممکن است.
